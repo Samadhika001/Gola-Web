@@ -7,6 +7,16 @@ import TrHome from "./screens/Traveler/TrHome";
 import Bookings from"./screens/ServiceProvider/Booking";
 import PackagesList from "./screens/ServiceProvider/PackagesList";
 import CreateService from "./screens/ServiceProvider/CreateService";
+import TrHotel from "./screens/Traveler/TrHotels";
+import TrTripTour from "./screens/Traveler/TrTripTour";
+import TrTripList from "./screens/Traveler/TrTripList";
+import TrTripCreate from "./screens/Traveler/TrTripCreate";
+import TrPlaces from "./screens/Traveler/TrPlaces";
+import TrCalender from "./screens/Traveler/TrCalender";
+import TrProfile from "./screens/Traveler/TrProfile";
+import TrChat from "./screens/Traveler/TrChat";
+import TrToDo from "./screens/Traveler/TrToDo";
+import TrCalendar from "./screens/Traveler/TrCalender";
 
 function App() {
   return (
@@ -16,11 +26,21 @@ function App() {
         <Route path="/loginScreen" element={<LoginScreen />}></Route>
         <Route path="/SignupScreen" element={<SignupScreen />}></Route>
         <Route path="/SpDashboard" element={<SpDashboard />}></Route>
-        <Route path="/TrHome" element={<TrHome />}></Route>
         <Route path="/Bookings" element={<Bookings />}></Route>
         <Route path="/PackagesList" element={<PackagesList />}></Route>
         <Route path="/CreateService" element={<CreateService />}></Route>
-    </Routes>
+
+        <Route path="/TrHome" element={<TrHome />}></Route>
+        <Route path="/TrHotels" element={<TrHotel />}></Route>
+        <Route path="/TrTripTour" element={<TrTripTour />}></Route>
+        <Route path="/TrTripList" element={<TrTripList />}></Route>
+        <Route path="/TrTripCreate" element={<TrTripCreate />}></Route>
+        <Route path="/TrPlaces" element={<TrPlaces />}></Route>
+        <Route path="/TrCalender" element={<TrCalender />}></Route>
+        <Route path="/TrProfile" element={<TrProfile />}></Route>
+        <Route path="/TrChat" element={<TrChat />}></Route>
+        <Route path="/TrToDo" element={<TrToDo />}></Route>
+      </Routes>
     </BrowserRouter>
   );
 }
