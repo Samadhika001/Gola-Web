@@ -103,7 +103,7 @@ function Sidebar() {
                                     <ListItemPrefix>
                                         <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                                     </ListItemPrefix>
-                                    Create
+                                    <Link to="/CreateService">Create</Link>
                                 </ListItem>
                             </List>
                         </AccordionBody>

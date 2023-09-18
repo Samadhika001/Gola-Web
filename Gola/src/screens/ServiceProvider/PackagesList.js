@@ -20,20 +20,20 @@ import Sidebar from "../../components/Serviceprovider/Sidebar";
 import TopBar from "../../components/Serviceprovider/TopBar";
 import * as React from "react";
 
-const TABS = [
-    {
-        label: "All",
-        value: "all",
-    },
-    {
-        label: "Monitored",
-        value: "monitored",
-    },
-    {
-        label: "Unmonitored",
-        value: "unmonitored",
-    },
-];
+// const TABS = [
+//     {
+//         label: "All",
+//         value: "all",
+//     },
+//     {
+//         label: "Monitored",
+//         value: "monitored",
+//     },
+//     {
+//         label: "Unmonitored",
+//         value: "unmonitored",
+//     },
+// ];
 
 const TABLE_HEAD = ["Member", "Function", "Status", "Employed", ""];
 
@@ -103,17 +103,17 @@ function PackagesList() {
                                 </Button>
                             </div>
                         </div>
-                        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-                            <Tabs value="all" className="w-full md:w-max">
-                                <TabsHeader>
-                                    {TABS.map(({ label, value }) => (
-                                        <Tab key={value} value={value}>
-                                            &nbsp;&nbsp;{label}&nbsp;&nbsp;
-                                        </Tab>
-                                    ))}
-                                </TabsHeader>
-                            </Tabs>
-                        </div>
+                        {/*<div className="flex flex-col items-center justify-between gap-4 md:flex-row">*/}
+                        {/*    <Tabs value="all" className="w-full md:w-max">*/}
+                        {/*        <TabsHeader>*/}
+                        {/*            {TABS.map(({ label, value }) => (*/}
+                        {/*                <Tab key={value} value={value}>*/}
+                        {/*                    &nbsp;&nbsp;{label}&nbsp;&nbsp;*/}
+                        {/*                </Tab>*/}
+                        {/*            ))}*/}
+                        {/*        </TabsHeader>*/}
+                        {/*    </Tabs>*/}
+                        {/*</div>*/}
                     </CardHeader>
                     <CardBody className="overflow-scroll px-0">
                         <table className="mt-4 w-full min-w-max table-auto text-left">
