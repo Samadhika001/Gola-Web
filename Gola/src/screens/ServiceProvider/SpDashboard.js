@@ -7,10 +7,11 @@ import {
     CardFooter,
     Typography,
 } from "@material-tailwind/react";
+import {PresentationChartBarIcon} from "@heroicons/react/24/solid";
 
 
 const SpDashboard = () => {
-    const TABLE_HEAD = ["Name", "Job", "Employed", ""];
+    const TABLE_HEAD = ["Customer", "Date", "Time", "Details"];
 
     const TABLE_ROWS = [
         {
@@ -61,45 +62,69 @@ const SpDashboard = () => {
             <Typography variant="h4" color="black">
                 10
             </Typography>
+            <CardFooter className="pt-0" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+                <div style={{ padding: '8px' }}>
+                    <PresentationChartBarIcon className=" h-12 w-12" />
+                </div>
+
+
+            </CardFooter>
         </CardBody>
-        <CardFooter className="pt-0">
-        </CardFooter>
+
     </Card>
     <Card className=" mt-6 h-40 w-60">
         <CardBody>
             <Typography font="poppins" variant="h5" color="blue-gray" className="mb-2">
-                Total Bookings
+                Total Earnings
             </Typography>
             <Typography variant="h4" color="black">
                 10
             </Typography>
+            <CardFooter className="pt-0" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+                <div style={{ padding: '8px' }}>
+                    <PresentationChartBarIcon className=" h-12 w-12" />
+                </div>
+
+
+            </CardFooter>
         </CardBody>
-        <CardFooter className="pt-0">
-        </CardFooter>
+
     </Card>
     <Card className=" mt-6 h-40 w-60">
         <CardBody>
             <Typography variant="h5" color="blue-gray" className="mb-2">
-                Total Bookings
+               Today's Bookings
             </Typography>
             <Typography variant="h4" color="black">
-                10
+                1
             </Typography>
-        </CardBody>
-        <CardFooter className="pt-0">
+
+        <CardFooter className="pt-0" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+<div style={{ padding: '8px' }}>
+    <PresentationChartBarIcon className=" h-12 w-12" />
+</div>
+
+
         </CardFooter>
+        </CardBody>
     </Card>
     <Card className=" mt-6 h-40 w-60">
         <CardBody>
             <Typography variant="h5" color="blue-gray" className="mb-2">
-                Total Bookings
+                Hold Money
             </Typography>
             <Typography variant="h4" color="black">
-                10
+                10 000$
             </Typography>
+            <CardFooter className="pt-0" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+                <div style={{ padding: '8px' }}>
+                    <PresentationChartBarIcon className=" h-12 w-12" />
+                </div>
+
+
+            </CardFooter>
         </CardBody>
-        <CardFooter className="pt-0">
-        </CardFooter>
+
     </Card>
 </div>
                 <div>
