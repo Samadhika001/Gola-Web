@@ -1,12 +1,11 @@
 import React from "react";
-import TripCard from "../../components/Traveler/TripCard";
 import Sidebar from "../../components/Traveler/Sidebar";
-import NavbarWithSearch from "../../components/Traveler/TrNavbar";
 import Footer from "../../components/LandingPage/Footer";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import TripNavbarWithSearch from "../../components/Traveler/TripNavbar";
 import TrNavbar from "../../components/Traveler/TrNavbar";
+import Calender from "../../components/Traveler/Calender";
 
 const TrCalendar = () => {
   return (
@@ -16,8 +15,8 @@ const TrCalendar = () => {
         <div className="flex-grow">
           <div>
             <TrNavbar />
-            <div className="grid gap-2 lg:grid-cols-3">
-              <h1>Calender</h1>
+            <div className="">
+              <Calender/>
             </div>
           </div>
         </div>
