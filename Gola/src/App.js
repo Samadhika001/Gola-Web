@@ -17,6 +17,8 @@ import TrProfile from "./screens/Traveler/TrProfile";
 import TrChat from "./screens/Traveler/TrChat";
 import TrToDo from "./screens/Traveler/TrToDo";
 import TrCalendar from "./screens/Traveler/TrCalender";
+import TrHotelDetails from "./screens/Traveler/TrHotelDetails";
+import TrPlaceDetails from "./screens/Traveler/TrPlaceDetails";
 
 function App() {
   return (
@@ -40,6 +42,9 @@ function App() {
         <Route path="/TrProfile" element={<TrProfile />}></Route>
         <Route path="/TrChat" element={<TrChat />}></Route>
         <Route path="/TrToDo" element={<TrToDo />}></Route>
+        <Route path="/TrToDo" element={<TrToDo />}></Route>
+        <Route path="/TrHotels/:hotelId" element={<TrHotelDetails />} />
+        <Route path="/TrPlaces/:placeId" element={<TrHotelDetails />} />
       </Routes>
     </BrowserRouter>
   );

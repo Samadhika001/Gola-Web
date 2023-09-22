@@ -11,17 +11,19 @@ import {
 
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
-const HotelCard =(value)=> { 
+const HotelCard =({ item , handleClick })=> { 
   
-  
+  const {name , description , img} = item;
   return (
     <Card className="w-full max-w-[22rem] shadow-lg m-8">
       <CardHeader floated={false} color="blue-gray">
-        <img
-          src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        <img src={img} />
+        {/* <img
+          src={img}
           alt="ui/ux review check"
-        />
+        /> */}
         <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
         <IconButton
           size="sm"
@@ -33,7 +35,6 @@ const HotelCard =(value)=> {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="w-6 h-6"
           >
             <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
           </svg>
@@ -42,9 +43,8 @@ const HotelCard =(value)=> {
       <CardBody>
         <div className="flex items-center justify-between mb-3">
           <Typography variant="h5" color="blue-gray" className="font-medium">
-            {value.name}
+            {name}
             {/* name of hotel as a property */}
-            Unawatuna beach hotel
           </Typography>
           <Typography
             color="blue-gray"
@@ -66,11 +66,8 @@ const HotelCard =(value)=> {
           </Typography>
         </div>
         <Typography color="gray">
-          {value.description}
           {/* description of hotel as a property */}
-           Enter a freshly updated and thoughtfully
-          furnished peaceful home surrounded by ancient trees, stone walls, and
-          open meadows.
+          {description}
         </Typography>
         {/* <div className="inline-flex flex-wrap items-center gap-3 mt-8 group">
           <Tooltip content="$129 per night">
@@ -161,8 +158,20 @@ const HotelCard =(value)=> {
         </div> */}
       </CardBody>
       <CardFooter className="pt-3">
-        <Button size="lg" fullWidth={true}>
-          Reserve
+      
+        <Link to={`/TrHotels/${item.id}`} className="text-white">
+          <Button fullWidth={true} className="bg-[green] mb-[10px]">
+            Show Details
+          </Button>
+        </Link>
+
+        <Button
+          size="lg"
+          fullWidth={true}
+          className="bg-[green]"
+          onClick={() => handleClick(item)}
+        >
+          Add to package
         </Button>
       </CardFooter>
     </Card>

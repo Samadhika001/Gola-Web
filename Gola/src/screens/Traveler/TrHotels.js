@@ -7,7 +7,10 @@ import NavbarWithSearch from "../../components/Traveler/TrNavbar";
 import Footer from "../../components/LandingPage/Footer";
 import { Input,Button } from "@material-tailwind/react";
 
+import list from '../../components/Traveler/HotelData'
+
 const TrHotels = () => {
+  const [cart , setCart] = useState([]);
   const [hotels, setHotels] = useState([]);
   const [searchInput, setSearchInput] = useState([]);
 
@@ -27,6 +30,13 @@ const TrHotels = () => {
         return hotel.name.match(searchInput);
       });
     }
+  }
+
+  const handleClick = (item) =>{
+    const newCart = [...cart, item];
+    // Update the cart state with the new array
+    setCart(newCart);
+    console.log(newCart);
   }
   
 
@@ -57,19 +67,17 @@ const TrHotels = () => {
                 </Button>
               </form>
               <div className="grid gap-2 lg:grid-cols-3">
+                {/* <HotelCard handlClick={handleClick} />
                 <HotelCard />
-                <HotelCard />
-                <HotelCard />
+                <HotelCard /> */}
 
                 {/* {hotels.map((hotel)=>{
-      <HotelCard name={hotel.name} description={hotel.description} />;
+      <HotelCard name={hotel.name} description={hotel.description img = {hotel.img}} handlClick={handleClick}/>;
     })
     }   */}
-
-                {/* {hotels.map((hotel , )=>{
-      <HotelCard name={hotel.name} description={hotel.description} />;
-    })
-    }   */}
+                  {list.map((item) => (
+                    <HotelCard  item={item} handleClick={handleClick}/>
+                  ))}
               </div>
             </div>
           </div>
