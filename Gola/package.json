@@ -21,6 +21,7 @@
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
+    "react-stripe-checkout": "^2.6.3",
     "stream-http": "^3.2.0",
     "styled-components": "^5.3.11",
     "tw-elements-react": "^1.0.0-alpha1",

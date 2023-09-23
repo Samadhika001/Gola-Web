@@ -1,6 +1,6 @@
 import unavatuna from '../../assets/maldives.jpg'
 
-const list = [
+const HotelList = [
   {
     id: 1,
     name: "Unavatuna Beach Hotel",
@@ -27,4 +27,4 @@ const list = [
   },
 ];
 
-export default list;
+export default HotelList;

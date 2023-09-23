@@ -1,12 +1,6 @@
-import unavatuna from "../../assets/maldives.jpg";
 
 const placeList = [
-  {
-    id: 1,
-    name: "Sigiriya",
-    description:" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed quos natus nisi, iure qui excepturi unde, harum voluptatum quo eligendi facere numquam vel repudiandae neque. Officiis nemo consequuntur id deleniti.",
-    img: "https://cdn.pixabay.com/photo/2014/09/24/14/40/sigiriya-459197_1280.jpg",
-  },
+ 
   {
     id: 2,
     name: "Mount Lavinia Beach",
