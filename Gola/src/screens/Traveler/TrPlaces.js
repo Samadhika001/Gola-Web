@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import HotelCard from "../../components/Traveler/HotelCards";
+import PlaceCard from "../../components/Traveler/PlaceCards";
 import axios from "axios";
 import Sidebar from "../../components/Traveler/Sidebar";
 import NavbarWithSearch from "../../components/Traveler/TrNavbar";
@@ -74,8 +74,8 @@ const TrPlaces = () => {
       <HotelCard name={hotel.name} description={hotel.description img = {hotel.img}} handlClick={handleClick}/>;
     })
     }   */}
-              {placeList.map((item) => (
-                <HotelCard item={item} handleClick={handleClick} />
+              {placeList.map((place) => (
+                <PlaceCard place={place} handleClick={handleClick} />
               ))}
             </div>
           </div>

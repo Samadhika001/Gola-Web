@@ -45,11 +45,11 @@ function App() {
         <Route path="/TrToDo" element={<TrToDo />}></Route>
         <Route path="/TrToDo" element={<TrToDo />}></Route>
         <Route path="/TrHotels/:hotelId" element={<TrHotelDetails />} />
-
         <Route path="/TrPlaces/:placeId" element={<TrHotelDetails />} />
         <Route path="/TrPlaces/:placeId" element={<TrPlaceDetails />} />
         <Route path="/Payment" element={<PaymentGateway />} />
         <Route path="/TrFoods" element={<TrFoods />} />
+        <Route path="/TrPlaces/:placeId" element={<TrPlaceDetails />} />
       </Routes>
     </BrowserRouter>
   );
