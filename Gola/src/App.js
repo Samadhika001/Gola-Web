@@ -21,6 +21,7 @@ import TrHotelDetails from "./screens/Traveler/TrHotelDetails";
 import TrPlaceDetails from "./screens/Traveler/TrPlaceDetails";
 import PaymentGateway from "./screens/Traveler/PaymentGateway";
 import TrFoods from "./screens/Traveler/TrFoods";
+import TrPackage from "./screens/Traveler/TrPackage";
 
 function App() {
   return (
@@ -51,7 +52,8 @@ function App() {
         <Route path="/TrPlaces/:placeId" element={<TrPlaceDetails />} />
         <Route path="/Payment" element={<PaymentGateway />} />
         <Route path="/TrFoods" element={<TrFoods />} />
-        <Route path="/TrPlaces/:placeId" element={<TrPlaceDetails />} />
+        <Route path="/TrPackage" element={<TrPackage />} />
+
       </Routes>
     </BrowserRouter>
   );
