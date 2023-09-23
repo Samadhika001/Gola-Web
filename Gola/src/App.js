@@ -5,6 +5,7 @@ import SignupScreen from "./screens/SignupScreen";
 import SpDashboard from "./screens/ServiceProvider/SpDashboard";
 import TrHome from "./screens/Traveler/TrHome";
 import Bookings from"./screens/ServiceProvider/Booking";
+import NewBooking from "./screens/ServiceProvider/NewBooking";
 import PackagesList from "./screens/ServiceProvider/PackagesList";
 import CreateService from "./screens/ServiceProvider/CreateService";
 import TrHotels from "./screens/Traveler/TrHotels";
@@ -32,6 +33,7 @@ function App() {
         <Route path="/Bookings" element={<Bookings />}></Route>
         <Route path="/PackagesList" element={<PackagesList />}></Route>
         <Route path="/CreateService" element={<CreateService />}></Route>
+        <Route path="/NewBooking" element={<NewBooking />}></Route>
 
         <Route path="/TrHome" element={<TrHome />}></Route>
         <Route path="/TrHotels" element={<TrHotels />}></Route>
