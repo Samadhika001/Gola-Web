@@ -13,13 +13,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const HotelCard =({ item , handleClick })=> { 
-  
-  const {name , description , img} = item;
+const FoodCard = ({ item, handleClick }) => {
+  const { name, description, img } = item;
   return (
     <Card className="w-full max-w-[22rem] shadow-lg m-8">
       <CardHeader floated={false} color="blue-gray">
-        <img src={img} />
+        <img src={img} className=""/>
         {/* <img
           src={img}
           alt="ui/ux review check"
@@ -158,7 +157,6 @@ const HotelCard =({ item , handleClick })=> {
         </div> */}
       </CardBody>
       <CardFooter className="pt-3">
-      
         <Link to={`/TrHotels/${item.id}`} className="text-white">
           <Button fullWidth={true} className="bg-[green] mb-[10px]">
             Show Details
@@ -176,5 +174,5 @@ const HotelCard =({ item , handleClick })=> {
       </CardFooter>
     </Card>
   );
-}
-export default HotelCard;
+};
+export default FoodCard;
