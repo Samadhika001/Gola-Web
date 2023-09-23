@@ -51,16 +51,20 @@ function Sidebar() {
                 </div>
                 <List>
                     <Accordion>
-                        <ListItem >
+
+                            <ListItem>
                                 <ListItemPrefix>
                                     <PresentationChartBarIcon className="h-5 w-5" />
                                 </ListItemPrefix>
                                 <Typography color="blue-gray" className="mr-auto font-normal">
                                     <Link to="/SpDashboard">Dashboard</Link>
                                 </Typography>
-                        </ListItem>
+                            </ListItem>
+
+
                     </Accordion>
-                    <Accordion>
+
+
                         <ListItem >
 
                             <ListItemPrefix>
@@ -71,7 +75,7 @@ function Sidebar() {
                             </Typography>
 
                         </ListItem>
-                    </Accordion>
+
                     <Accordion
                         open={open === 2}
                         icon={
