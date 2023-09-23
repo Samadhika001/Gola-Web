@@ -44,6 +44,12 @@ const TrNavbar = () => {
           >
             Transport
           </Link>
+          <Link
+            className="bg-gray-400 pr-[50px] pl-[50px] hover:bg-[#efefef] rounded-xl"
+            to="/TrPackage"
+          >
+            Package
+          </Link>
         </div>
         {/* <div className="flex gap-1 ml-auto md:mr-4">
           <IconButton variant="text" color="blue-gray">
