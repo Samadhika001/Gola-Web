@@ -7,7 +7,7 @@ import TrHome from "./screens/Traveler/TrHome";
 import Bookings from"./screens/ServiceProvider/Booking";
 import PackagesList from "./screens/ServiceProvider/PackagesList";
 import CreateService from "./screens/ServiceProvider/CreateService";
-import TrHotel from "./screens/Traveler/TrHotels";
+import TrHotels from "./screens/Traveler/TrHotels";
 import TrTripTour from "./screens/Traveler/TrTripTour";
 import TrTripList from "./screens/Traveler/TrTripList";
 import TrTripCreate from "./screens/Traveler/TrTripCreate";
@@ -16,9 +16,10 @@ import TrCalender from "./screens/Traveler/TrCalender";
 import TrProfile from "./screens/Traveler/TrProfile";
 import TrChat from "./screens/Traveler/TrChat";
 import TrToDo from "./screens/Traveler/TrToDo";
-import TrCalendar from "./screens/Traveler/TrCalender";
 import TrHotelDetails from "./screens/Traveler/TrHotelDetails";
 import TrPlaceDetails from "./screens/Traveler/TrPlaceDetails";
+import PaymentGateway from "./screens/Traveler/PaymentGateway";
+import TrFoods from "./screens/Traveler/TrFoods";
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
         <Route path="/CreateService" element={<CreateService />}></Route>
 
         <Route path="/TrHome" element={<TrHome />}></Route>
-        <Route path="/TrHotels" element={<TrHotel />}></Route>
+        <Route path="/TrHotels" element={<TrHotels />}></Route>
         <Route path="/TrTripTour" element={<TrTripTour />}></Route>
         <Route path="/TrTripList" element={<TrTripList />}></Route>
         <Route path="/TrTripCreate" element={<TrTripCreate />}></Route>
@@ -44,7 +45,11 @@ function App() {
         <Route path="/TrToDo" element={<TrToDo />}></Route>
         <Route path="/TrToDo" element={<TrToDo />}></Route>
         <Route path="/TrHotels/:hotelId" element={<TrHotelDetails />} />
+
         <Route path="/TrPlaces/:placeId" element={<TrHotelDetails />} />
+        <Route path="/TrPlaces/:placeId" element={<TrPlaceDetails />} />
+        <Route path="/Payment" element={<PaymentGateway />} />
+        <Route path="/TrFoods" element={<TrFoods />} />
       </Routes>
     </BrowserRouter>
   );

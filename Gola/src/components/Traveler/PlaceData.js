@@ -1,11 +1,10 @@
-import unavatuna from "../../assets/maldives.jpg";
 
 const placeList = [
   {
     id: 1,
     name: "Sigiriya",
-    description: "Southern Hotel of our island",
-    img: "https://cdn.pixabay.com/photo/2014/09/24/14/40/sigiriya-459197_1280.jpg",
+      "Sigiriya, also known as the Lion Rock, is a historic site in Sri Lanka built by King Kasyapa in the 5th century. This magnificent fortress palace features a 660-foot high rock, frescoes of beautiful maidens, and extensive water gardens. It stands as a testament to ancient Sri Lankan engineering and artistic prowess.",
+    img: "https://cdn.pixabay.com/photo/2014/09/24/14/40/sigiriya-459197_1280.jpg"
   },
   {
     id: 2,

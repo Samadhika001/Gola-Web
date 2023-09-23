@@ -28,7 +28,7 @@ const TrNavbar = () => {
           </Link>
           <Link
             className="pr-[50px] pl-[50px] hover:bg-[#efefef] rounded-xl"
-            to=""
+            to="/TrFoods"
           >
             Food
           </Link>

@@ -7,7 +7,7 @@ import NavbarWithSearch from "../../components/Traveler/TrNavbar";
 import Footer from "../../components/LandingPage/Footer";
 import { Input,Button } from "@material-tailwind/react";
 
-import list from '../../components/Traveler/HotelData'
+import HotelList from '../../components/Traveler/HotelData'
 
 const TrHotels = () => {
   const [cart , setCart] = useState([]);
@@ -75,7 +75,7 @@ const TrHotels = () => {
       <HotelCard name={hotel.name} description={hotel.description img = {hotel.img}} handlClick={handleClick}/>;
     })
     }   */}
-                  {list.map((item) => (
+                  {HotelList.map((item) => (
                     <HotelCard  item={item} handleClick={handleClick}/>
                   ))}
               </div>
