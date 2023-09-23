@@ -44,7 +44,7 @@ function App() {
         <Route path="/TrToDo" element={<TrToDo />}></Route>
         <Route path="/TrToDo" element={<TrToDo />}></Route>
         <Route path="/TrHotels/:hotelId" element={<TrHotelDetails />} />
-        <Route path="/TrPlaces/:placeId" element={<TrHotelDetails />} />
+        <Route path="/TrPlaces/:placeId" element={<TrPlaceDetails />} />
       </Routes>
     </BrowserRouter>
   );
