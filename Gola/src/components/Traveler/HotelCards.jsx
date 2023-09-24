@@ -158,21 +158,22 @@ const HotelCard =({ item , handleClick })=> {
         </div> */}
       </CardBody>
       <CardFooter className="pt-3">
-      
         <Link to={`/TrHotels/${item.id}`} className="text-white">
           <Button fullWidth={true} className="bg-[green] mb-[10px]">
             Show Details
           </Button>
         </Link>
 
-        <Button
-          size="lg"
-          fullWidth={true}
-          className="bg-[green]"
-          onClick={() => handleClick(item)}
-        >
-          Add to package
-        </Button>
+        {/* <Link to="/TrPackage"> */}
+          <Button
+            size="lg"
+            fullWidth={true}
+            className="bg-[green]"
+            onClick={() => handleClick(item)}
+          >
+            Add to package
+          </Button>
+        {/* </Link> */}
       </CardFooter>
     </Card>
   );

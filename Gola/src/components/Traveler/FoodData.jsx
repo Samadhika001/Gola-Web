@@ -1,6 +1,6 @@
 import unavatuna from "../../assets/maldives.jpg";
 
-const FoodList = [
+const foodList = [
   {
     id: 1,
     name: "Sri Lankan",
@@ -31,4 +31,4 @@ const FoodList = [
   },
 ];
 
-export default FoodList;
+export default foodList;
