@@ -10,7 +10,7 @@ import {
   Button,
   Typography,
 } from "@material-tailwind/react";
-import { useParams } from "react-router-dom";
+import { useParams , Link} from "react-router-dom";
 
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
@@ -62,10 +62,11 @@ const TrHotelDetails = () => {
                       <Input type="text" size="lg" label="No of rooms" />
                       <Input type="text" size="lg" label="No of person" />
                     </div>
-
-                    <Button className="mt-6 bg-[#107b10]" fullWidth>
-                      Add to Package
-                    </Button>
+                    <Link to="/TrPackage">
+                      <Button className="mt-6 bg-[#107b10]" fullWidth>
+                        Add to Package
+                      </Button>
+                    </Link>
                   </form>
                 </div>
               </Card>

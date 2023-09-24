@@ -157,7 +157,7 @@ const FoodCard = ({ item, handleClick }) => {
         </div> */}
       </CardBody>
       <CardFooter className="pt-3">
-        <Link to={`/TrHotels/${item.id}`} className="text-white">
+        <Link to={`/TrFoods/${item.id}`} className="text-white">
           <Button fullWidth={true} className="bg-[green] mb-[10px]">
             Show Details
           </Button>
