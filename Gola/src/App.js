@@ -1,8 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen";
+import ChooseTypeScreen from "./screens/ChooseTypeScreen";
 import LoginScreen from "./screens/LoginScreen";
 import SignupScreen from "./screens/SignupScreen";
+import ServiceReg1 from "./screens/ServiceReg1";
+import UserDetails from "./screens/UserDetails";
+import BusinessDetails from "./screens/UserDetails";
+import Success from "./screens/Success";
 import SpDashboard from "./screens/ServiceProvider/SpDashboard";
+import ViewService from "./screens/ServiceProvider/ViewService";
 import TrHome from "./screens/Traveler/TrHome";
 import Bookings from"./screens/ServiceProvider/Booking";
 import NewBooking from "./screens/ServiceProvider/NewBooking";
@@ -28,14 +34,20 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomeScreen />}></Route>
+        <Route path="/" element={<HomeScreen/>}></Route>
+        <Route path="/ChooseTypeScreen" element={<ChooseTypeScreen />}></Route>
         <Route path="/loginScreen" element={<LoginScreen />}></Route>
         <Route path="/SignupScreen" element={<SignupScreen />}></Route>
+        <Route path="/ServiceReg1" element={<ServiceReg1 />}></Route>
+        <Route path="/UserDetails" element={<UserDetails />}></Route>
+        <Route path="/BusinessDetails" element={<BusinessDetails />}></Route>
+        <Route path="/Success" element={<Success />}></Route>
         <Route path="/SpDashboard" element={<SpDashboard />}></Route>
         <Route path="/Bookings" element={<Bookings />}></Route>
         <Route path="/PackagesList" element={<PackagesList />}></Route>
         <Route path="/CreateService" element={<CreateService />}></Route>
         <Route path="/NewBooking" element={<NewBooking />}></Route>
+        <Route path="/ViewService" element={<ViewService />}></Route>
 
         <Route path="/TrHome" element={<TrHome />}></Route>
         <Route path="/TrHotels" element={<TrHotels />}></Route>

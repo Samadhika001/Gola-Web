@@ -42,7 +42,7 @@ function Sidebar() {
     return (
         <div className="flex h-screen">
 
-            <Card className="w-full max-w-[18rem] p-4 shadow-xl shadow-light-green-100-900/5 ">
+            <Card className="w-full max-w-[18rem] p-4 -light-green-100-900/5 ">
                 <div className="mb-2 flex items-center gap-2 p-2">
                     <img src={Logo2} alt="brand" className="h-20 w-20" />
                     <Typography variant="h3" color="blue-gray">
@@ -138,7 +138,7 @@ function Sidebar() {
                         <ListItemPrefix>
                             <PowerIcon className="h-5 w-5" />
                         </ListItemPrefix>
-                        Log Out
+                        <Link to="/">Log Out</Link>
                     </ListItem>
                 </List>
 

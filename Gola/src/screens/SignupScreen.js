@@ -35,7 +35,8 @@ function SignupScreen() {
         // Basic email and password validation
         if (!email || !password || !username || !confirmpassword) {
             setErrorMessage('Please fill in all fields.');
-        } else if (!isValidEmail(email)) {
+        }
+        else if (!isValidEmail(email)) {
             setErrorMessage('Invalid email format.');
         } else if (password !== confirmpassword) {
             setErrorMessage('Password and Confirm Password do not match.');
@@ -44,7 +45,7 @@ function SignupScreen() {
             // Redirect the user upon successful login
             // Replace the following line with your logic
             setSuccessMessage('You have successfully registered.');
-            navigate('/'); // Redirect to HomeScreen
+            navigate('/TrHome'); // Redirect to TrHome
         }
     };
 
@@ -125,9 +126,11 @@ function SignupScreen() {
                         {errorMessage && (
                             <div className="text-red-500 text-sm mt-2">{errorMessage}</div>
                         )}
+
                         <Button type="submit" className="mt-6" fullWidth>
                             Register
                         </Button>
+
                         <Typography color="gray" className="mt-4 text-center font-normal">
                             Already have an account?{" "}
                             <Link to="/LoginScreen">

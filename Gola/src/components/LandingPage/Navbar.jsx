@@ -39,7 +39,7 @@ const Navbar = () => {
           </button>
         </Link>
 
-        <Link to="/SignupScreen">
+        <Link to="/ChooseTypeScreen">
           <button className="text-[#09b600] bg-[#ffffff] h-[40px] w-[120px] rounded-lg text-white shadow-lg">
             Signup
           </button>
