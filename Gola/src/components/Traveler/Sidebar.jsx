@@ -1,7 +1,4 @@
 import React from "react";
-import '../../../src/index.css';
-import logo from '../../../src/assets/logo.png'
-import { Link } from "react-router-dom";
 import {
   Card,
   Typography,
@@ -10,79 +7,144 @@ import {
   ListItemPrefix,
   ListItemSuffix,
   Chip,
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+  Alert,
 } from "@material-tailwind/react";
 import {
   PresentationChartBarIcon,
   ShoppingBagIcon,
   UserCircleIcon,
   Cog6ToothIcon,
+  ChatBubbleBottomCenterIcon,
   InboxIcon,
   PowerIcon,
-  BeakerIcon,
-  ChatBubbleLeftEllipsisIcon,
-  DocumentTextIcon,
-  CalendarIcon,
-  HomeIcon,
+  QueueListIcon, CalendarIcon, WalletIcon,
 } from "@heroicons/react/24/solid";
+import {
+  ChevronRightIcon,
+  ChevronDownIcon,
+  CubeTransparentIcon,
+} from "@heroicons/react/24/outline";
+import Logo2 from "../../assets/logo2.png";
+import { Link } from "react-router-dom";
 
-const Sidebar=()=> {
+
+function Sidebar() {
+  const [open, setOpen] = React.useState(0);
+  const [openAlert, setOpenAlert] = React.useState(true);
+
+  const handleOpen = (value) => {
+    setOpen(open === value ? 0 : value);
+  };
+
   return (
-    <Card className="shadow-blue-gray-50 w-full max-w-[20rem] p-4 shadow-xl font-[poppins] flex-shrink-0">
-      <div className="flex items-center p-4">
-        <img src={logo} alt="" srcset="" className="h-20 w-30" />
-      </div>
-      <List>
-        <Link to="/TrHome">
-          <ListItem className="bg-[#d3fccf]">
-            <ListItemPrefix>
-              <HomeIcon className="w-5 h-5" />
-            </ListItemPrefix>
-            Home
-          </ListItem>
-        </Link>
+      <div className="flex h-screen">
 
-        <Link to="/TrTripTour">
-          <ListItem>
-            <ListItemPrefix>
-              <ShoppingBagIcon className="w-5 h-5" />
-            </ListItemPrefix>
-            Trip
-          </ListItem>
-        </Link>
-        <Link to="/TrProfile">
-          <ListItem className="bg-[#d3fccf]">
-            <ListItemPrefix>
-              <UserCircleIcon className="w-5 h-5" />
-            </ListItemPrefix>
-            Profile
-          </ListItem>
-        </Link>
-        <Link to="/TrChat">
-          <ListItem>
-            <ListItemPrefix>
-              <ChatBubbleLeftEllipsisIcon className="w-5 h-5" />
-            </ListItemPrefix>
-            Chat
-          </ListItem>
-        </Link>
-        <Link to="/TrCalender">
-          <ListItem className="bg-[#d3fccf]">
-            <ListItemPrefix>
-              <CalendarIcon className="w-5 h-5" />
-            </ListItemPrefix>
-            Calender
-          </ListItem>
-        </Link>
-        <Link to="/TrToDo">
-          <ListItem>
-            <ListItemPrefix>
-              <DocumentTextIcon className="w-5 h-5" />
-            </ListItemPrefix>
-            To do
-          </ListItem>
-        </Link>
-      </List>
-    </Card>
+        <Card className="w-full max-w-[18rem] p-4 -light-green-100-900/5 ">
+          <div className="mb-2 flex items-center gap-2 p-2">
+            <img src={Logo2} alt="brand" className="h-20 w-20" />
+            <Typography variant="h3" color="blue-gray">
+              Gola
+            </Typography>
+          </div>
+          <List>
+            <Accordion>
+
+              <ListItem>
+                <ListItemPrefix>
+                  <PresentationChartBarIcon className="h-5 w-5" />
+                </ListItemPrefix>
+                <Typography color="blue-gray" className="mr-auto font-normal">
+                  <Link to="/SpDashboard">Home</Link>
+                </Typography>
+              </ListItem>
+
+
+            </Accordion>
+
+
+            <ListItem >
+
+              <ListItemPrefix>
+                <QueueListIcon className="h-5 w-5" />
+              </ListItemPrefix>
+              <Typography color="blue-gray" className="mr-auto font-normal">
+                <Link to="/Bookings">Bookings</Link>
+              </Typography>
+
+            </ListItem>
+
+            <Accordion
+                open={open === 2}
+                icon={
+                  <ChevronDownIcon
+                      strokeWidth={2.5}
+                      className={`mx-auto h-4 w-4 transition-transform ${open === 2 ? "rotate-180" : ""}`}
+                  />
+                }
+            >
+              <ListItem className="p-0" selected={open === 2}>
+                <AccordionHeader onClick={() => handleOpen(2)} className="border-b-0 p-3">
+                  <ListItemPrefix>
+                    <ShoppingBagIcon className="h-5 w-5" />
+                  </ListItemPrefix>
+                  <Typography color="blue-gray" className="mr-auto font-normal">
+                    My Trips
+                  </Typography>
+                </AccordionHeader>
+              </ListItem>
+              <AccordionBody className="py-1">
+                <List className="p-0">
+                  <ListItem>
+                    <ListItemPrefix>
+                      <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                    </ListItemPrefix>
+                    <Link to="/PackagesList">Ongoing</Link>
+                  </ListItem>
+                  <ListItem>
+                    <ListItemPrefix>
+                      <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
+                    </ListItemPrefix>
+                    <Link to="/CreateService">Create</Link>
+                  </ListItem>
+                </List>
+              </AccordionBody>
+            </Accordion>
+            <hr className="my-2 border-blue-gray-50" />
+            <ListItem>
+              <ListItemPrefix>
+                <ChatBubbleBottomCenterIcon className="h-5 w-5" />
+              </ListItemPrefix>
+              Chat
+              <ListItemSuffix>
+                <Chip value="14" size="sm" variant="ghost" color="blue-gray" className="rounded-full" />
+              </ListItemSuffix>
+            </ListItem>
+            <ListItem>
+              <ListItemPrefix>
+                <CalendarIcon className="h-5 w-5" />
+              </ListItemPrefix>
+              Calendar
+            </ListItem>
+            <ListItem>
+              <ListItemPrefix>
+                <WalletIcon className="h-5 w-5" />
+              </ListItemPrefix>
+              Account
+            </ListItem>
+            <ListItem>
+              <ListItemPrefix>
+                <PowerIcon className="h-5 w-5" />
+              </ListItemPrefix>
+              <Link to="/">Log Out</Link>
+            </ListItem>
+          </List>
+
+        </Card>
+      </div>
+
   );
 }
 
