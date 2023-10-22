@@ -1,39 +1,40 @@
 import React from "react";
-import Sidebar from "../../components/Traveler/Sidebar";
-import NavbarWithSearch from "../../components/Traveler/TrNavbar";
-import Navbar from "../../components/LandingPage/Navbar";
-import Footer from "../../components/LandingPage/Footer";
-import { Input, Button } from "@material-tailwind/react";
-const Home = () => {
-  return (
-    <div>
-      <div className="flex">
-        <Sidebar />
-        <div>
-          <div>
-            <NavbarWithSearch />
-            <div className="relative flex gap-2 md:w-max pl-[50px] mt-6">
-              <Input
-                type="search"
-                label="Type here..."
-                className="pr-20"
-                containerProps={{
-                  className: "min-w-[288px]",
-                }}
-              />
-              <Button
-                size="sm"
-                className="!absolute right-1 top-1 rounded bg-[#09B600]"
-              >
-                Search
-              </Button>
-            </div>
-          </div>
+import Navbar from "../../components/Traveler/Navbar";
+import Home from "../../components/Traveler/Home";
+import HomeContent from "../../components/Traveler/HomeContent";
+import Footer from "../../components/Traveler/Footer";
+import homeimg from "../../assets/6.jpg";
+import Destination from "../../components/LandingPage/Destination";
+const TrHome = () => {
+    const imgStyle = {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        zIndex: -1, // Place the image behind the content
+    };
+
+
+    return (
+
+        <div >
+            <img
+                className="w-full h-full object-cover"
+                src={homeimg}
+                alt="Background Image"
+                style={imgStyle}
+            />
+            <div
+                className="absolute top-0 left-0 w-full h-full
+       bg-gray-700/30"></div>
+            <Navbar />
+            <Home />
+          <HomeContent />
+        <Footer />
         </div>
-      </div>
-      <Footer />
-    </div>
-  );
+    );
 };
 
-export default Home;
+export default TrHome;
