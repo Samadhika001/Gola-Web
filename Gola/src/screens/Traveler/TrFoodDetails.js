@@ -68,7 +68,6 @@ const TrFoodDetails = () => {
                   </Card>
                 </div>
               )}
-
             </div>
           </div>
         </div>

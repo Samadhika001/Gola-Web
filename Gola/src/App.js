@@ -3,10 +3,10 @@ import HomeScreen from "./screens/HomeScreen";
 import LoginScreen from "./screens/LoginScreen";
 import SignupScreen from "./screens/SignupScreen";
 import SpDashboard from "./screens/ServiceProvider/SpDashboard";
-import TrHome from "./screens/Traveler/TrHome";
 import Bookings from"./screens/ServiceProvider/Booking";
 import PackagesList from "./screens/ServiceProvider/PackagesList";
 import CreateService from "./screens/ServiceProvider/CreateService";
+import TrHome from "./screens/Traveler/TrHome";
 import TrHotels from "./screens/Traveler/TrHotels";
 import TrTripTour from "./screens/Traveler/TrTripTour";
 import TrTripList from "./screens/Traveler/TrTripList";
@@ -47,10 +47,10 @@ function App() {
         <Route path="/TrToDo" element={<TrToDo />}></Route>
         <Route path="/TrToDo" element={<TrToDo />}></Route>
         <Route path="/TrHotels/:hotelId" element={<TrHotelDetails />} />
-        <Route path="/TrPlaces/:placeId" element={<TrHotelDetails />} />
+        <Route path="/TrPlaces/:placeId" element={<TrPlaceDetails />} />
         <Route path="/Payment" element={<PaymentGateway />} />
         <Route path="/TrFoods" element={<TrFoods />} />
-        <Route path="/TrFoods/:FoodId" element={<TrFoodDetails />} />
+        <Route path="/TrFoods/:foodId" element={<TrFoodDetails />} />
         <Route path="/TrPackage" element={<TrPackage />} />
       </Routes>
     </BrowserRouter>

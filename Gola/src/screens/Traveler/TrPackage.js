@@ -50,10 +50,10 @@ const TrPackage = ({ cart, setCart, handleChange }) => {
                       srcset=""
                       className="pt-[10px]"
                     />
-                    <p className="pl-[20px]">{item.name}</p>
+                    <p className="pl-[20px] w-[100px]">{item.name}</p>
                     {/* <p className="pl-[20px]">{item.price}</p> */}
                   </div>
-                  <br />
+                  <br/> <br />
                 </div>
               ))}
             </article>
