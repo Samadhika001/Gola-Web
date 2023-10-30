@@ -71,6 +71,7 @@ const Navbar = () => {
       >
         <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
         <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+          <MenuItem onClick={handleMenuClose}> <Link to='/'> Log Out</Link>  </MenuItem>
       </Menu>
   );
 
@@ -143,7 +144,7 @@ const Navbar = () => {
       </div>
       <div className="px-16">
         <ul className="hidden md:flex">
-          <li className="p-4 font-bold">Home</li>
+          <li className="p-4 font-bold"> <Link to="/Trhome"> Home</Link></li>
           <li className="p-4 font-bold">To Do</li>
           <li className="p-4 font-bold">Travel Map</li>
           <li className="p-4 font-bold">Cart</li>

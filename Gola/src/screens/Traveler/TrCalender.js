@@ -4,7 +4,6 @@ import Footer from "../../components/LandingPage/Footer";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import TripNavbarWithSearch from "../../components/Traveler/TripNavbar";
-import TrNavbar from "../../components/Traveler/TrNavbar";
 import Calender from "../../components/Traveler/Calender";
 
 const TrCalendar = () => {
@@ -14,7 +13,7 @@ const TrCalendar = () => {
         <Sidebar />
         <div className="flex-grow">
           <div>
-            <TrNavbar />
+
             <div className="">
               <Calender/>
             </div>

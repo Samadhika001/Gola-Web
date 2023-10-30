@@ -1,7 +1,5 @@
 import React,{useState , useEffect} from "react";
 import Sidebar from "../../components/Traveler/Sidebar";
-import NavbarWithSearch from "../../components/Traveler/TrNavbar";
-import Navbar from "../../components/LandingPage/Navbar";
 import Footer from "../../components/LandingPage/Footer";
 import {
   Card,
@@ -12,10 +10,6 @@ import {
 } from "@material-tailwind/react";
 import { useParams , Link} from "react-router-dom";
 
-import { Fragment } from "react";
-import { Menu, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import axios from "axios";
 
 //demo data
 import list from '../../components/Traveler/HotelData'
@@ -44,7 +38,6 @@ const TrHotelDetails = () => {
       <div className="flex">
         <Sidebar />
         <div>
-          <NavbarWithSearch />
           <div className="flex pb-[20px]">
             <div className="relative flex gap-2 md:w-max pl-[50px] mb-[20px]">
               <Card color="transparent" className="shadow-xl mt-[20px]">

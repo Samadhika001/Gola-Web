@@ -19,7 +19,7 @@ const TrHome = () => {
 
     return (
 
-        <div >
+        <div>
             <img
                 className="w-full h-full object-cover"
                 src={homeimg}
