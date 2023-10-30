@@ -20,10 +20,6 @@ const PlaceCard = ({ place, handleClick }) =>
     <Card className="w-full max-w-[22rem] shadow-lg m-8">
       <CardHeader floated={false} color="blue-gray">
         <img src={img} />
-        {/* <img
-          src={img}
-          alt="ui/ux review check"
-        /> */}
         <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
         <IconButton
           size="sm"

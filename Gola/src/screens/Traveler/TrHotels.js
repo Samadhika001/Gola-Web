@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import HotelCard from "../../components/Traveler/HotelCards";
 import axios from "axios";
 import Sidebar from "../../components/Traveler/Sidebar";
-import NavbarWithSearch from "../../components/Traveler/TrNavbar";
 import Footer from "../../components/LandingPage/Footer";
 import { Input, Button } from "@material-tailwind/react";
 import { useDispatch } from "react-redux";
@@ -44,7 +43,6 @@ const TrHotels = () => {
         <Sidebar />
         <div className="flex-grow">
           <div>
-            <NavbarWithSearch />
             <form
               onSubmit={handleChange}
               className="relative flex w-full gap-2 md:w-max pl-[50px] mt-6"

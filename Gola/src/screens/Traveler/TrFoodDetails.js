@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "../../components/Traveler/Sidebar";
-import NavbarWithSearch from "../../components/Traveler/TrNavbar";
-import Navbar from "../../components/LandingPage/Navbar";
+
 import Footer from "../../components/LandingPage/Footer";
 import {
   Card,
@@ -11,11 +10,6 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { useParams } from "react-router-dom";
-
-import { Fragment } from "react";
-import { Menu, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import axios from "axios";
 
 //demo data
 import foodList from "../../components/Traveler/FoodData";
@@ -42,7 +36,7 @@ const TrFoodDetails = () => {
       <div className="flex">
         <Sidebar />
         <div>
-          <NavbarWithSearch />
+
           <div className="flex pb-[20px] justify-center">
             <div className="m-[20px] pl-[20px]">
               {foodDetails && (

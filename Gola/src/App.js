@@ -24,12 +24,12 @@ import TrProfile from "./screens/Traveler/TrProfile";
 import TrChat from "./screens/Traveler/TrChat";
 import TrToDo from "./screens/Traveler/TrToDo";
 import TrHotelDetails from "./screens/Traveler/TrHotelDetails";
-import TrPlaceDetails from "./screens/Traveler/TrPlaceDetails";
 import TrFoodDetails from "./screens/Traveler/TrFoodDetails";
 import PaymentGateway from "./screens/Traveler/PaymentGateway";
 import TrFoods from "./screens/Traveler/TrFoods";
 import TrPackage from "./screens/Traveler/TrPackage";
-
+import TrSearchResult from "./screens/Traveler/TrSearchResult";
+import TrViewService from "./screens/Traveler/TrViewService";
 function App() {
   return (
     <BrowserRouter>
@@ -50,12 +50,14 @@ function App() {
         <Route path="/ViewService" element={<ViewService />}></Route>
 
         <Route path="/TrHome" element={<TrHome />}></Route>
+        <Route path="/TrSearchResult" element={<TrSearchResult />}></Route>
         <Route path="/TrHotels" element={<TrHotels />}></Route>
         <Route path="/TrTripTour" element={<TrTripTour />}></Route>
         <Route path="/TrTripList" element={<TrTripList />}></Route>
         <Route path="/TrTripCreate" element={<TrTripCreate />}></Route>
         <Route path="/TrPlaces" element={<TrPlaces />}></Route>
         <Route path="/TrCalender" element={<TrCalender />}></Route>
+        <Route path="/TrViewService" element={<TrViewService />} />
         <Route path="/TrProfile" element={<TrProfile />}></Route>
         <Route path="/TrChat" element={<TrChat />}></Route>
         <Route path="/TrToDo" element={<TrToDo />}></Route>

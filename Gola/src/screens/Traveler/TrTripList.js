@@ -1,11 +1,11 @@
 import React from "react";
-import TripCard from "../../components/Traveler/TripCard";
+import TransportCard from "../../components/Traveler/TransportCard";
 import Sidebar from "../../components/Traveler/Sidebar";
-import NavbarWithSearch from "../../components/Traveler/TrNavbar";
+
 import Footer from "../../components/LandingPage/Footer";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import TripNavbarWithSearch from "../../components/Traveler/TripNavbar";
+
 import { Button, Card } from "@material-tailwind/react";
 
 const TrTripList = () => {
@@ -24,7 +24,7 @@ const TrTripList = () => {
         <Sidebar />
         <div className="flex-grow">
           <div>
-            <TripNavbarWithSearch />
+
 
             <div className="flex">
               <div className="pt-12 pl-12 pr-[100px]">
@@ -57,12 +57,12 @@ const TrTripList = () => {
               </div>
             </div>
             <div className="grid gap-2 lg:grid-cols-3">
-              <TripCard />
-              <TripCard />
-              <TripCard />
+              <TransportCard />
+              <TransportCard />
+              <TransportCard />
 
               {/* {trips.map((trip)=>{
-      <TripCard name={trip.name} description={trip.description} />;
+      <TransportCard name={trip.name} description={trip.description} />;
     })
     }   */}
             </div>
