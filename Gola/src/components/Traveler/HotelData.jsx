@@ -1,30 +1,147 @@
-import unavatuna from '../../assets/maldives.jpg'
 
-const HotelList = [
+
+const accommodationsDetails = [
   {
-    id: 1,
-    name: "Unavatuna Araliya Beach Hotel",
-    description: "Southern Hotel of our island",
-    img: "https://do6raq9h04ex.cloudfront.net/sites/2/2021/03/146439688_1075312069646476_6626974179216859201_o.jpg",
+    accommodation_id: 1,
+    accommodation_name: "Jetwing Colombo 7",
+    accommodation_address:"Colombo 7, Sri Lanka",
+    accommodation_image: "https://www.jetwinghotels.com/wp-content/uploads/2019/06/colombo-hotel-category-744x653.jpg",
+    accommodation_description: "Situated in the heart of Colombo, Ward Place, 2.4 km from U.S. Embassy, Jetwing Colombo Seven boasts a year-round rooftop pool. The hotel has a sun terrace and spa centre, and guests can enjoy a meal at the restaurant or a drink at the bar. Free WiFi is offered throughout the property and free private parking is available on site. Each room at this hotel is air conditioned and comes with a flat-screen TV with satellite channels. All rooms have a seating area where you can relax. Tea/coffee making facilities can be found in the room. Rooms have a private bathroom. For your comfort, you will find bath robes and free toiletries. You will find a 24-hour front desk at the property. R Premadasa Stadium is 2.6 km from Jetwing Colombo Seven, while Asiri Surgical Hospital is 2.6 km away. Bandaranaike International Airport is 29 km from the property.\n" +
+        "\n" +
+        "Facilities\n" +
+        "Outdoor swimming pool\n" +
+        "Airport shuttle\n" +
+        "Non-smoking rooms\n" +
+        "Spa and wellness centre\n" +
+        "Fitness centre\n" +
+        "Room service",
   },
   {
-    id: 2,
-    name: "Galadari Hotel",
-    description: "Southern Hotel of our island",
-    img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/80043638.jpg?k=e71cfeccccd35d54ba5272323e199a217e11133c087a6895112571490da6acdd&o=&hp=1",
+    accommodation_id: 2,
+    accommodation_name: "Jetwing Adventure",
+    accommodation_address:"Colombo 7, Sri Lanka",
+    accommodation_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5mukUQHj33zfwUqxqM3x4hGTr_5LGXT-iZg&usqp=CAU",
+    accommodation_description:
+        "Situated in the heart of Colombo, Ward Place, 2.4 km from U.S. Embassy, Jetwing Colombo Seven boasts a year-round rooftop pool. The hotel has a sun terrace and spa centre, and guests can enjoy a meal at the restaurant or a drink at the bar. Free WiFi is offered throughout the property and free private parking is available on site. Each room at this hotel is air conditioned and comes with a flat-screen TV with satellite channels. All rooms have a seating area where you can relax. Tea/coffee making facilities can be found in the room. Rooms have a private bathroom. For your comfort, you will find bath robes and free toiletries. You will find a 24-hour front desk at the property. R Premadasa Stadium is 2.6 km from Jetwing Colombo Seven, while Asiri Surgical Hospital is 2.6 km away. Bandaranaike International Airport is 29 km from the property.\n" +
+        "\n" +
+        "Facilities\n" +
+        "Outdoor swimming pool\n" +
+        "Airport shuttle\n" +
+        "Non-smoking rooms\n" +
+        "Spa and wellness centre\n" +
+        "Fitness centre\n" +
+        "Room service",
   },
   {
-    id: 3,
-    name: "Shangri-La Hotel",
-    description: "Southern Hotel of our island",
-    img: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/120176876.jpg?k=a21fc99938e3c05bfe02fc51713c9240e26bbeae35d14f0559a910bbbfbdcab3&o=&hp=1",
+    accommodation_id: 3,
+    accommodation_name: "Jetwind Saman Villa",
+    accommodation_address:"Colombo 7, Sri Lanka",
+    accommodation_image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/03/7a/c5/birds-eye-view.jpg?w=700&h=-1&s=1",
+    accommodation_description:
+        "Situated in the heart of Colombo, Ward Place, 2.4 km from U.S. Embassy, Jetwing Colombo Seven boasts a year-round rooftop pool. The hotel has a sun terrace and spa centre, and guests can enjoy a meal at the restaurant or a drink at the bar. Free WiFi is offered throughout the property and free private parking is available on site. Each room at this hotel is air conditioned and comes with a flat-screen TV with satellite channels. All rooms have a seating area where you can relax. Tea/coffee making facilities can be found in the room. Rooms have a private bathroom. For your comfort, you will find bath robes and free toiletries. You will find a 24-hour front desk at the property. R Premadasa Stadium is 2.6 km from Jetwing Colombo Seven, while Asiri Surgical Hospital is 2.6 km away. Bandaranaike International Airport is 29 km from the property.\n" +
+        "\n" +
+        "Facilities\n" +
+        "Outdoor swimming pool\n" +
+        "Airport shuttle\n" +
+        "Non-smoking rooms\n" +
+        "Spa and wellness centre\n" +
+        "Fitness centre\n" +
+        "Room service",
   },
   {
-    id: 4,
-    name: "Grand Hemali Hotel",
-    description: "Southern Hotel of our island",
-    img: "https://scontent.fcmb10-1.fna.fbcdn.net/v/t39.30808-6/217583549_610415800363137_2528434104179923929_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5614bc&_nc_eui2=AeGfGG8TD2p1tnUsBKFcvOYzt8-cyLx2clS3z5zIvHZyVCBSCh3HN1sTRvosuEbvmsl6wUVN84CWz7r6fF3tmNYx&_nc_ohc=gThhW4S2_IsAX8grEvk&_nc_ht=scontent.fcmb10-1.fna&oh=00_AfBXsPXSV7YNhlTflv99lBUcj1TBVXblwdbMPnlnNpPoMg&oe=6513C80C",
+    accommodation_id: 4,
+    accommodation_name: "Jetwing Colombo 7",
+    accommodation_address:"Colombo 7, Sri Lanka",
+    accommodation_image: "https://www.jetwinghotels.com/wp-content/uploads/2019/06/colombo-hotel-category-744x653.jpg",
+    accommodation_description:
+        "Situated in the heart of Colombo, Ward Place, 2.4 km from U.S. Embassy, Jetwing Colombo Seven boasts a year-round rooftop pool. The hotel has a sun terrace and spa centre, and guests can enjoy a meal at the restaurant or a drink at the bar. Free WiFi is offered throughout the property and free private parking is available on site. Each room at this hotel is air conditioned and comes with a flat-screen TV with satellite channels. All rooms have a seating area where you can relax. Tea/coffee making facilities can be found in the room. Rooms have a private bathroom. For your comfort, you will find bath robes and free toiletries. You will find a 24-hour front desk at the property. R Premadasa Stadium is 2.6 km from Jetwing Colombo Seven, while Asiri Surgical Hospital is 2.6 km away. Bandaranaike International Airport is 29 km from the property.\n" +
+        "\n" +
+        "Facilities\n" +
+        "Outdoor swimming pool\n" +
+        "Airport shuttle\n" +
+        "Non-smoking rooms\n" +
+        "Spa and wellness centre\n" +
+        "Fitness centre\n" +
+        "Room service",
+  },
+  {
+    accommodation_id: 5,
+    accommodation_name: "Jetwing Adventure",
+    accommodation_address:"Colombo 7, Sri Lanka",
+    accommodation_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5mukUQHj33zfwUqxqM3x4hGTr_5LGXT-iZg&usqp=CAU",
+    accommodation_description:
+        "Situated in the heart of Colombo, Ward Place, 2.4 km from U.S. Embassy, Jetwing Colombo Seven boasts a year-round rooftop pool. The hotel has a sun terrace and spa centre, and guests can enjoy a meal at the restaurant or a drink at the bar. Free WiFi is offered throughout the property and free private parking is available on site. Each room at this hotel is air conditioned and comes with a flat-screen TV with satellite channels. All rooms have a seating area where you can relax. Tea/coffee making facilities can be found in the room. Rooms have a private bathroom. For your comfort, you will find bath robes and free toiletries. You will find a 24-hour front desk at the property. R Premadasa Stadium is 2.6 km from Jetwing Colombo Seven, while Asiri Surgical Hospital is 2.6 km away. Bandaranaike International Airport is 29 km from the property.\n" +
+        "\n" +
+        "Facilities\n" +
+        "Outdoor swimming pool\n" +
+        "Airport shuttle\n" +
+        "Non-smoking rooms\n" +
+        "Spa and wellness centre\n" +
+        "Fitness centre\n" +
+        "Room service",
+  },
+  {
+    accommodation_id: 6,
+    accommodation_name: "Jetwind Saman Villa",
+    accommodation_address:"Colombo 7, Sri Lanka",
+    accommodation_image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/03/7a/c5/birds-eye-view.jpg?w=700&h=-1&s=1",
+    accommodation_description:
+        "Situated in the heart of Colombo, Ward Place, 2.4 km from U.S. Embassy, Jetwing Colombo Seven boasts a year-round rooftop pool. The hotel has a sun terrace and spa centre, and guests can enjoy a meal at the restaurant or a drink at the bar. Free WiFi is offered throughout the property and free private parking is available on site. Each room at this hotel is air conditioned and comes with a flat-screen TV with satellite channels. All rooms have a seating area where you can relax. Tea/coffee making facilities can be found in the room. Rooms have a private bathroom. For your comfort, you will find bath robes and free toiletries. You will find a 24-hour front desk at the property. R Premadasa Stadium is 2.6 km from Jetwing Colombo Seven, while Asiri Surgical Hospital is 2.6 km away. Bandaranaike International Airport is 29 km from the property.\n" +
+        "\n" +
+        "Facilities\n" +
+        "Outdoor swimming pool\n" +
+        "Airport shuttle\n" +
+        "Non-smoking rooms\n" +
+        "Spa and wellness centre\n" +
+        "Fitness centre\n" +
+        "Room service",
+  },{
+    accommodation_id: 7,
+    accommodation_name: "Jetwing Colombo 7",
+    accommodation_address:"Colombo 7, Sri Lanka",
+    accommodation_image: "https://www.jetwinghotels.com/wp-content/uploads/2019/06/colombo-hotel-category-744x653.jpg",
+    accommodation_description:
+        "Situated in the heart of Colombo, Ward Place, 2.4 km from U.S. Embassy, Jetwing Colombo Seven boasts a year-round rooftop pool. The hotel has a sun terrace and spa centre, and guests can enjoy a meal at the restaurant or a drink at the bar. Free WiFi is offered throughout the property and free private parking is available on site. Each room at this hotel is air conditioned and comes with a flat-screen TV with satellite channels. All rooms have a seating area where you can relax. Tea/coffee making facilities can be found in the room. Rooms have a private bathroom. For your comfort, you will find bath robes and free toiletries. You will find a 24-hour front desk at the property. R Premadasa Stadium is 2.6 km from Jetwing Colombo Seven, while Asiri Surgical Hospital is 2.6 km away. Bandaranaike International Airport is 29 km from the property.\n" +
+        "\n" +
+        "Facilities\n" +
+        "Outdoor swimming pool\n" +
+        "Airport shuttle\n" +
+        "Non-smoking rooms\n" +
+        "Spa and wellness centre\n" +
+        "Fitness centre\n" +
+        "Room service",
+  },
+  {
+    accommodation_id: 8,
+    accommodation_name: "Jetwing Adventure",
+    accommodation_address:"Colombo 7, Sri Lanka",
+    accommodation_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5mukUQHj33zfwUqxqM3x4hGTr_5LGXT-iZg&usqp=CAU",
+    accommodation_description:
+        "Situated in the heart of Colombo, Ward Place, 2.4 km from U.S. Embassy, Jetwing Colombo Seven boasts a year-round rooftop pool. The hotel has a sun terrace and spa centre, and guests can enjoy a meal at the restaurant or a drink at the bar. Free WiFi is offered throughout the property and free private parking is available on site. Each room at this hotel is air conditioned and comes with a flat-screen TV with satellite channels. All rooms have a seating area where you can relax. Tea/coffee making facilities can be found in the room. Rooms have a private bathroom. For your comfort, you will find bath robes and free toiletries. You will find a 24-hour front desk at the property. R Premadasa Stadium is 2.6 km from Jetwing Colombo Seven, while Asiri Surgical Hospital is 2.6 km away. Bandaranaike International Airport is 29 km from the property.\n" +
+        "\n" +
+        "Facilities\n" +
+        "Outdoor swimming pool\n" +
+        "Airport shuttle\n" +
+        "Non-smoking rooms\n" +
+        "Spa and wellness centre\n" +
+        "Fitness centre\n" +
+        "Room service",
+  },
+  {
+    accommodation_id: 9,
+    accommodation_name: "Jetwind Saman Villa",
+    accommodation_address:"Colombo 7, Sri Lanka",
+    accommodation_image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/03/7a/c5/birds-eye-view.jpg?w=700&h=-1&s=1",
+    accommodation_description:
+        "Situated in the heart of Colombo, Ward Place, 2.4 km from U.S. Embassy, Jetwing Colombo Seven boasts a year-round rooftop pool. The hotel has a sun terrace and spa centre, and guests can enjoy a meal at the restaurant or a drink at the bar. Free WiFi is offered throughout the property and free private parking is available on site. Each room at this hotel is air conditioned and comes with a flat-screen TV with satellite channels. All rooms have a seating area where you can relax. Tea/coffee making facilities can be found in the room. Rooms have a private bathroom. For your comfort, you will find bath robes and free toiletries. You will find a 24-hour front desk at the property. R Premadasa Stadium is 2.6 km from Jetwing Colombo Seven, while Asiri Surgical Hospital is 2.6 km away. Bandaranaike International Airport is 29 km from the property.\n" +
+        "\n" +"\n"+
+        "Facilities\n" +
+        "Outdoor swimming pool\n" +
+        "Airport shuttle\n" +
+        "Non-smoking rooms\n" +
+        "Spa and wellness centre\n" +
+        "Fitness centre\n" +
+        "Room service",
   },
 ];
-
-export default HotelList;
+export default accommodationsDetails;

@@ -96,7 +96,7 @@ function LoginScreen() {
                         </Button>
                         <Typography color="gray" className="mt-4 text-center font-normal">
                             Don't have an account?{" "}
-                            <Link to="/SignupScreen">
+                            <Link to="/ChooseTypeScreen">
                             <a href="#" className="font-medium text-light-green-500">
                                 Sign Up
                             </a>

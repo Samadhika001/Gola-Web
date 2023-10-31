@@ -14,7 +14,7 @@ export default class ServiceReg1 extends Component {
         confirmPassword: '',
         businessName: '',
         telephone: '',
-        type: '',
+        district: '',
         address: '',
         city: '',
     }

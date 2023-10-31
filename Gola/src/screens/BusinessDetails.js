@@ -90,10 +90,10 @@ const BusinessDetails = ({ nextStep, prevStep, handleChange, values }) => {
                             />
                             <Input
                                 size="lg"
-                                label="Business Type"
+                                label="District of Location"
                                 type="text"
                                 onChange={handleChange('type')}
-                                defaultValue={values.type}
+                                defaultValue={values.district}
                             />
                             <Input
                                 size="lg"
