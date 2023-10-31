@@ -3,7 +3,6 @@ import TrHotels from "./TrHotels";
 import { Link } from "react-router-dom";
 import { Button } from "@material-tailwind/react";
 import { useSelector } from "react-redux";
-import TrNavbar from "../../components/Traveler/TrNavbar";
 import Sidebar from "../../components/Traveler/Sidebar";
 import Footer from "../../components/LandingPage/Footer";
 
@@ -39,7 +38,7 @@ const TrPackage = ({ cart, setCart, handleChange }) => {
         <Sidebar />
         <div className="flex-grow">
           <div>
-            <TrNavbar />
+
             <article className="grid gap-2 lg:grid-cols-3 pt-[40px]">
               {packageDetails.map((item) => (
                 <div className="cart" key={item.id}>

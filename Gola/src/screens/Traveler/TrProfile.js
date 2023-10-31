@@ -1,12 +1,9 @@
 import React from "react";
-import TripCard from "../../components/Traveler/TripCard";
+import TransportCard from "../../components/Traveler/TransportCard";
 import Sidebar from "../../components/Traveler/Sidebar";
-import NavbarWithSearch from "../../components/Traveler/TrNavbar";
+
 import Footer from "../../components/LandingPage/Footer";
-import axios from "axios";
-import { useState, useEffect } from "react";
-import TripNavbarWithSearch from "../../components/Traveler/TripNavbar";
-import TrNavbar from "../../components/Traveler/TrNavbar";
+
 
 const TrProfile = () => {
   return (
@@ -15,7 +12,7 @@ const TrProfile = () => {
         <Sidebar />
         <div className="flex-grow">
           <div>
-            <TrNavbar />
+
             <div className="grid gap-2 lg:grid-cols-3">
               <h1>Profile</h1>
             </div>
