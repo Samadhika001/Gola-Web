@@ -10,7 +10,7 @@ import {
 import HotelCard from "./HotelCards";
 import TransportCard from "./TransportCard";
 import ExperinenceCard from "./ExperienceCards";
-
+import accommodationsDetails from "../../components/Traveler/HotelData";
 const HomeContent = () =>{
 
     const [activeTab, setActiveTab] = React.useState("accommodation");
@@ -18,17 +18,19 @@ const HomeContent = () =>{
         {
             label: "Accommodation",
             value: "accommodation",
-            desc: <HotelCard values="accommodation" />,
+            desc: <HotelCard accommodations={accommodationsDetails} />
         },
-        {
+        // Add more items to the 'data' array if needed
+
+    {
             label: "Transport",
             value: "transport",
-            desc: <TransportCard values="transport" />
+            desc: <TransportCard  />
         },
         {
             label: "Experience",
             value: "experience",
-            desc: <ExperinenceCard values="experience" />
+            desc: <ExperinenceCard />
         },
 
     ];

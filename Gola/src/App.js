@@ -49,20 +49,20 @@ function App() {
         <Route path="/NewBooking" element={<NewBooking />}></Route>
         <Route path="/ViewService" element={<ViewService />}></Route>
 
-        <Route path="/TrHome" element={<TrHome />}></Route>
+        <Route path="/TrHome/" element={<TrHome />}></Route>
         <Route path="/TrSearchResult" element={<TrSearchResult />}></Route>
         <Route path="/TrHotels" element={<TrHotels />}></Route>
         <Route path="/TrTripTour" element={<TrTripTour />}></Route>
         <Route path="/TrTripList" element={<TrTripList />}></Route>
-        <Route path="/TrTripCreate" element={<TrTripCreate />}></Route>
+        <Route path="/TrTripCreate/:accommodation_id" element={<TrTripCreate />}></Route>
         <Route path="/TrPlaces" element={<TrPlaces />}></Route>
         <Route path="/TrCalender" element={<TrCalender />}></Route>
-        <Route path="/TrViewService" element={<TrViewService />} />
+        <Route path="/TrViewService/:accommodation_id" element={<TrViewService />} />
         <Route path="/TrProfile" element={<TrProfile />}></Route>
         <Route path="/TrChat" element={<TrChat />}></Route>
         <Route path="/TrToDo" element={<TrToDo />}></Route>
         <Route path="/TrToDo" element={<TrToDo />}></Route>
-        <Route path="/TrHotels/:hotelId" element={<TrHotelDetails />} />
+        <Route path="/TrHotels" element={<TrHotelDetails />} />
         <Route path="/TrPlaces/:placeId" element={<TrHotelDetails />} />
         <Route path="/Payment" element={<PaymentGateway />} />
         <Route path="/TrFoods" element={<TrFoods />} />

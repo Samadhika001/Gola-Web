@@ -5,6 +5,7 @@ import HomeContent from "../../components/Traveler/HomeContent";
 import Footer from "../../components/Traveler/Footer";
 import homeimg from "../../assets/6.jpg";
 import Destination from "../../components/LandingPage/Destination";
+import accommodationsDetails from "../../components/Traveler/HotelData";
 const TrHome = () => {
     const imgStyle = {
         position: "absolute",

@@ -3,7 +3,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import Logo from '../../assets/logo.png'
 import { Link } from 'react-router-dom';
-
+import {Button} from "@material-tailwind/react";
 
 const Navbar = () => {
   const [nav, setnav] = useState(false);
@@ -37,9 +37,9 @@ const Navbar = () => {
         </Link>
 
         <Link to="/ChooseTypeScreen">
-          <button className="text-[#09b600] bg-[#ffffff] h-[40px] w-[120px] rounded-lg text-white shadow-lg">
+          <Button className="bg-[#ffffff] text-[#09b600] h-[40px] w-[120px] rounded-lg shadow-lg">
             Signup
-          </button>
+          </Button>
         </Link>
       </div>
 

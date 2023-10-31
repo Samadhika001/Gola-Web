@@ -2,11 +2,12 @@ import React from "react";
 import TransportCard from "../../components/Traveler/TransportCard";
 import Sidebar from "../../components/Traveler/Sidebar";
 
-import Footer from "../../components/LandingPage/Footer";
+import Footer from "../../components/Traveler/Footer";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-import { Button, Card } from "@material-tailwind/react";
+import {Button, Card, Typography} from "@material-tailwind/react";
+import Navbar from "../../components/Traveler/Navbar";
 
 const TrTripList = () => {
   const [trips, setTrips] = useState([]);
@@ -20,55 +21,15 @@ const TrTripList = () => {
 
   return (
     <div className="flex flex-col h-screen">
-      <div className="flex">
-        <Sidebar />
-        <div className="flex-grow">
-          <div>
-
-
-            <div className="flex">
-              <div className="pt-12 pl-12 pr-[100px]">
-                <Card
-                  className="p-[10px] w-[200px] text-[#f8f8ff] shadow-xl flex-row"
-                  style={{
-                    background:
-                      "linear-gradient(to right, #1bab1b,#1bab1b, #00ff7f",
-                  }}
-                >
-                  <div>Completed</div>
-                  <div className="ml-14">
-                    {/* Completed count from database */}06
-                  </div>
-                </Card>
-              </div>
-              <div className="pt-12 pl-[100px]">
-                <Card
-                  className="p-[10px] w-[200px]  text-[#f8f8ff] shadow-xl flex-row"
-                  style={{
-                    background:
-                      "linear-gradient(to right, #1bab1b,#1bab1b, #00ff7f",
-                  }}
-                >
-                  <div>Pending</div>
-                  <div className="ml-[80px]">
-                    {/* Pending count from database */}02
-                  </div>
-                </Card>
-              </div>
-            </div>
-            <div className="grid gap-2 lg:grid-cols-3">
-              <TransportCard />
-              <TransportCard />
-              <TransportCard />
-
-              {/* {trips.map((trip)=>{
-      <TransportCard name={trip.name} description={trip.description} />;
-    })
-    }   */}
-            </div>
-          </div>
+      <Navbar />
+        <div className="m-4">
+            <Typography variant="h4" color="blue-gray"className=" my-5" >
+            My Trips
+        </Typography>
+        <Typography variant="h5" color="blue-gray" >
+            My Trips
+        </Typography>
         </div>
-      </div>
       <Footer />
     </div>
   );
