@@ -11,7 +11,9 @@ import HotelCard from "./HotelCards";
 import TransportCard from "./TransportCard";
 import ExperinenceCard from "./ExperienceCards";
 import accommodationsDetails from "../../components/Traveler/HotelData";
+import transportDetails from "./TransportData";
 const HomeContent = () =>{
+
 
     const [activeTab, setActiveTab] = React.useState("accommodation");
     const data = [
@@ -25,7 +27,7 @@ const HomeContent = () =>{
     {
             label: "Transport",
             value: "transport",
-            desc: <TransportCard  />
+            desc: <TransportCard transports={transportDetails} />
         },
         {
             label: "Experience",

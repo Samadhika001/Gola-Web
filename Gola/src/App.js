@@ -30,9 +30,11 @@ import TrFoods from "./screens/Traveler/TrFoods";
 import TrPackage from "./screens/Traveler/TrPackage";
 import TrSearchResult from "./screens/Traveler/TrSearchResult";
 import TrViewService from "./screens/Traveler/TrViewService";
+import {ShopContext, ShopContextProvider} from "./context/shop_context";
 function App() {
   return (
     <BrowserRouter>
+        <ShopContextProvider>
       <Routes>
         <Route path="/" element={<HomeScreen/>}></Route>
         <Route path="/ChooseTypeScreen" element={<ChooseTypeScreen />}></Route>
@@ -50,25 +52,32 @@ function App() {
         <Route path="/ViewService" element={<ViewService />}></Route>
 
         <Route path="/TrHome/" element={<TrHome />}></Route>
-        <Route path="/TrSearchResult" element={<TrSearchResult />}></Route>
-        <Route path="/TrHotels" element={<TrHotels />}></Route>
-        <Route path="/TrTripTour" element={<TrTripTour />}></Route>
-        <Route path="/TrTripList" element={<TrTripList />}></Route>
-        <Route path="/TrTripCreate/:accommodation_id" element={<TrTripCreate />}></Route>
-        <Route path="/TrPlaces" element={<TrPlaces />}></Route>
-        <Route path="/TrCalender" element={<TrCalender />}></Route>
-        <Route path="/TrViewService/:accommodation_id" element={<TrViewService />} />
-        <Route path="/TrProfile" element={<TrProfile />}></Route>
-        <Route path="/TrChat" element={<TrChat />}></Route>
-        <Route path="/TrToDo" element={<TrToDo />}></Route>
-        <Route path="/TrToDo" element={<TrToDo />}></Route>
-        <Route path="/TrHotels" element={<TrHotelDetails />} />
-        <Route path="/TrPlaces/:placeId" element={<TrHotelDetails />} />
-        <Route path="/Payment" element={<PaymentGateway />} />
-        <Route path="/TrFoods" element={<TrFoods />} />
-        <Route path="/TrFoods/:FoodId" element={<TrFoodDetails />} />
-        <Route path="/TrPackage" element={<TrPackage />} />
+
+          <Route path="/TrSearchResult" element={<TrSearchResult />}></Route>
+          <Route path="/TrHotels" element={<TrHotels />}></Route>
+          <Route path="/TrTripTour" element={<TrTripTour />}></Route>
+          <Route path="/TrTripList" element={<TrTripList />}></Route>
+          <Route path="/TrTripCreate" element={<TrTripCreate />}></Route>
+          <Route path="/TrPlaces" element={<TrPlaces />}></Route>
+          <Route path="/TrCalender" element={<TrCalender />}></Route>
+
+          <Route path="/TrViewService/:accommodation_id" element={<TrViewService />} />
+            <Route path="/TrPackage" element={<TrPackage />} />
+
+          <Route path="/TrProfile" element={<TrProfile />}></Route>
+          <Route path="/TrChat" element={<TrChat />}></Route>
+          <Route path="/TrToDo" element={<TrToDo />}></Route>
+          <Route path="/TrToDo" element={<TrToDo />}></Route>
+          <Route path="/TrHotels" element={<TrHotelDetails />} />
+          <Route path="/TrPlaces/:placeId" element={<TrHotelDetails />} />
+          <Route path="/Payment" element={<PaymentGateway />} />
+          <Route path="/TrFoods" element={<TrFoods />} />
+          <Route path="/TrFoods/:FoodId" element={<TrFoodDetails />} />
+
+
+
       </Routes>
+        </ShopContextProvider>
     </BrowserRouter>
   );
 }

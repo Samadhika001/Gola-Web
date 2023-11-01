@@ -49,25 +49,41 @@ function CreateService() {
                                     <div className="mb-4 flex flex-row gap-6">
                                         <Input size="lg" label="Business Name"/>
                                         <Input size="lg" label="Business Email" />
+                                        <Input size="lg" label="Business Telephone" />
                                         <Input size="lg" label="Address" />
                                     </div>
 
 
                                         <Typography color="gray" className="mt-2 mb-2 font-normal">
-                                           Short Description about Your Service Type <span style={{ color: 'red' }}>*</span>
+                                          Detailed Description about Your Service Type <span style={{ color: 'red' }}>*</span>
                                         </Typography>
 
                                         <Textarea label="Description" />
-                                    <Typography color="gray" className="mt-2 mb-2 font-normal">
-                                        Description of the Facilities <span style={{ color: 'red' }}>*</span>
-                                    </Typography>
+                                    <div className="my-4 grid grid-cols-2 gap-4 ">
+                                        <Input size="lg" label="Room Count"/>
+                                        <Input size="lg" label="Unit Price for Room"/>
 
-                                    <Textarea label="Description" />
+                                        <Typography color="gray" className="mt-2 mb-2 font-normal">
+                                            Add images of your service <span style={{ color: 'red' }}>*</span>
+                                        </Typography>
+                                        <div className="mb-3">
+                                            <Input
+                                                type="file"
+                                                id={`formFileMultiple`}
+                                                multiple
+                                            />
+                                        </div>
+                                    </div>
+                                    {/*<Typography color="gray" className="mt-2 mb-2 font-normal">*/}
+                                    {/*    Description of the Facilities <span style={{ color: 'red' }}>*</span>*/}
+                                    {/*</Typography>*/}
 
-                                    <Typography color="gray" className="mt-2 mb-2 font-normal">
-                                       Room Details <span style={{ color: 'red' }}>*</span>
-                                    </Typography>
-                                <RoomForm />
+                                    {/*<Textarea label="Description" />*/}
+
+                                {/*    <Typography color="gray" className="mt-2 mb-2 font-normal">*/}
+                                {/*       Room Details <span style={{ color: 'red' }}>*</span>*/}
+                                {/*    </Typography>*/}
+                                {/*<RoomForm />*/}
                                     <div>
                                         <Button className="mt-6 px-44 "  >
                                             Create
@@ -89,20 +105,32 @@ function CreateService() {
                                     <div className="mb-4 flex flex-row gap-6">
                                         <Input size="lg" label="Business Name"/>
                                         <Input size="lg" label="Business Email" />
+                                        <Input size="lg" label="Business Telephone" />
                                         <Input size="lg" label="Address" />
+                                        <Input size="lg" label="Location latitude" />
+                                        <Input size="lg" label="Location longitude" />
                                     </div>
 
 
                                     <Typography color="gray" className="mt-2 mb-2 font-normal">
-                                        Short Description about Your Service Type <span style={{ color: 'red' }}>*</span>
+                                       Detailed Description about Your Service Type <span style={{ color: 'red' }}>*</span>
                                     </Typography>
 
                                     <Textarea label="Description" />
 
-                                    <Typography color="gray" className="mt-2 mb-2 font-normal">
-                                        Transport Details <span style={{ color: 'red' }}>*</span>
-                                    </Typography>
-                                    <TransportForm />
+                                    <div className="my-4 grid grid-cols-2 gap-4 ">
+                                        <Input size="lg" label="Unit Price for 1km"/>
+                                        <Typography color="gray" className="mt-2 mb-2 font-normal">
+                                            Add images of your service <span style={{ color: 'red' }}>*</span>
+                                        </Typography>
+                                        <div className="mb-3">
+                                            <Input
+                                                type="file"
+                                                id={`formFileMultiple`}
+                                                multiple
+                                            />
+                                        </div>
+                                    </div>
                                     <div>
                                         <Button className="mt-6 px-44 "  >
                                             Create
@@ -124,20 +152,33 @@ function CreateService() {
                                     <div className="mb-4 flex flex-row gap-6">
                                         <Input size="lg" label="Business Name"/>
                                         <Input size="lg" label="Business Email" />
+                                        <Input size="lg" label="Business Telephone" />
                                         <Input size="lg" label="Address" />
+                                        <Input size="lg" label="Location latitude" />
+                                        <Input size="lg" label="Location longitude" />
                                     </div>
 
 
                                     <Typography color="gray" className="mt-2 mb-2 font-normal">
-                                        Short Description about Your Service Type <span style={{ color: 'red' }}>*</span>
+                                       Detailed Description about Your Service Type <span style={{ color: 'red' }}>*</span>
                                     </Typography>
 
                                     <Textarea label="Description" />
 
-                                    <Typography color="gray" className="mt-2 mb-2 font-normal">
-                                        Experience Details <span style={{ color: 'red' }}>*</span>
-                                    </Typography>
-                                    <ExperienceForm />
+                                    <div className="my-4 grid grid-cols-2 gap-4 ">
+                                        <Input size="lg" label="Capacity Count"/>
+                                        <Input size="lg" label="Unit Price for Person"/>
+                                        <Typography color="gray" className="mt-2 mb-2 font-normal">
+                                            Add images of your service <span style={{ color: 'red' }}>*</span>
+                                        </Typography>
+                                        <div className="mb-3">
+                                            <Input
+                                                type="file"
+                                                id={`formFileMultiple`}
+                                                multiple
+                                            />
+                                        </div>
+                                    </div>
                                     <div>
                                         <Button className="mt-6 px-44 "  >
                                             Create

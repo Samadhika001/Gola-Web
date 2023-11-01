@@ -14,70 +14,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 
-const TransportCard = () => {
+const TransportCard = ({transports}) => {
   // Assuming you have fetched and stored transport data in 'transports' state
-  const transports = [
-    {
-      transport_id: 1,
-      transport_name: "Yoga Transport",
-      transport_image: "https://www.vanhiresrilanka.com/images-vanhire/Hire_Luxury_Van_Colombo/VanHire2_orig.jpg",
-      // Add other transport properties here
-    },
-    {
-      transport_id: 2,
-      transport_name: "taxi.lk",
-      transport_image: "https://www.taxi.lk/operation/images/inependent/2/thumbnail.jpg",
-      // Add other transport properties here
-    },
-    {
-      transport_id: 3,
-      transport_name: "travel Lanka",
-      transport_image: "https://www.lankaholidays.com/pics/38359/Dual%20AC%20van.jpg",
-      // Add other transport properties here
-    },
-    {
-      transport_id: 4,
-      transport_name: "Yoga Transport",
-      transport_image: "https://www.vanhiresrilanka.com/images-vanhire/Hire_Luxury_Van_Colombo/VanHire2_orig.jpg",
-      // Add other transport properties here
-    },
-    {
-      transport_id: 5,
-      transport_name: "taxi.lk",
-      transport_image: "https://www.taxi.lk/operation/images/inependent/2/thumbnail.jpg",
-      // Add other transport properties here
-    },
-    {
-      transport_id: 6,
-      transport_name: "Yoga Transport",
-      transport_image: "https://www.vanhiresrilanka.com/images-vanhire/Hire_Luxury_Van_Colombo/VanHire2_orig.jpg",
-      // Add other transport properties here
-    },
-    {
-      transport_id: 7,
-      transport_name: "taxi.lk",
-      transport_image: "https://www.taxi.lk/operation/images/inependent/2/thumbnail.jpg",
-      // Add other transport properties here
-    },
-    {
-      transport_id: 8,
-      transport_name: "travel Lanka",
-      transport_image: "https://www.lankaholidays.com/pics/38359/Dual%20AC%20van.jpg",
-      // Add other transport properties here
-    },
-    {
-      transport_id: 9,
-      transport_name: "Yoga Transport",
-      transport_image: "https://www.vanhiresrilanka.com/images-vanhire/Hire_Luxury_Van_Colombo/VanHire2_orig.jpg",
-      // Add other transport properties here
-    },
-    {
-      transport_id: 10,
-      transport_name: "taxi.lk",
-      transport_image: "https://www.taxi.lk/operation/images/inependent/2/thumbnail.jpg",
-      // Add other transport properties here
-    },
-  ];
 
   const settings = {
     dots: true,

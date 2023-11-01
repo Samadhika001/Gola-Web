@@ -147,7 +147,7 @@ const Navbar = () => {
           <li className="p-4 font-bold"> <Link to="/Trhome"> Home</Link></li>
           <li className="p-4 font-bold">To Do</li>
           <li className="p-4 font-bold">Travel Map</li>
-          <li className="p-4 font-bold">Cart</li>
+          {/*<li className="p-4 font-bold">Cart</li>*/}
 
           <li className="p-4 font-bold"><Link to="/TrTripList"> My Trips</Link></li>
         </ul>
