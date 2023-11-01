@@ -1,35 +1,51 @@
-import React, { useState,useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import { useNavigate, useParams,Link } from 'react-router-dom';
 import {Carousel, Typography,Rating,Accordion,
-    AccordionHeader,
-    AccordionBody,
-    Input,Button} from "@material-tailwind/react";
+    Popover,
+    PopoverHandler,
+    PopoverContent,
+   Button,
+    Card,
+    Input,
+    Checkbox,
+} from "@material-tailwind/react";
 
 import TopBar from "../../components/Serviceprovider/TopBar";
 import jetwing from "../../assets/jetwing.jpg";
-import accommodationsDetails from '../../components/Traveler/HotelData'; // Import your accommodation data
-
+import accommodationsDetails from '../../components/Traveler/HotelData';
+import {ShopContext} from "../../context/shop_context";
+import transportDetails from "../../components/Traveler/TransportData"; // Import your accommodation data
 function TrViewService() {
-    // const navigate = useNavigate();
-    //
-    //
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     navigate('/Trhome');
-    // };
+
+    const{addToCart}=useContext(ShopContext);
+    const { cartItems } = useContext(ShopContext);
 
     const [open, setOpen] = React.useState(1);
+    const navigate = useNavigate();
 
-    const handleOpen = (value) => setOpen(open === value ? 0 : value);
+    const [userInput, setUserInput] = useState({
+        checkInDate: '',
+        checkOutDate: '',
+        roomsCount: 1,
+    });
+
+
     const { accommodation_id } = useParams();
     const selectedAccommodation = accommodationsDetails.find(accommodation => accommodation.accommodation_id === parseInt(accommodation_id));
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setUserInput({
+            ...userInput,
+            [name]: value,
+        });
+    };
 
     return (
         <div className="flex flex-col ">
             <div className="border w-full">
                 <TopBar/>
             </div>
-
+            {selectedAccommodation && (
             <div className=" m-8 ">
                 <div className="flex flex-row">
                     <Carousel
@@ -64,14 +80,83 @@ function TrViewService() {
                             className="h-full w-full object-cover"
                         />
                     </Carousel>
-                    {/*<form className="my-4 mx-12 w-80 max-w-screen-lg sm:w-96" onSubmit={handleSubmit}>*/}
-                    <div classname="my-4 mx-12 w-80 max-w-screen-lg sm:w-96">
-
-                        <Link to={`/TrTripCreate/${selectedAccommodation.accommodation_id}`}>
+                    <div className="my-4 mx-12 w-80 max-w-screen-lg sm:w-96">
+                        <Popover>
+                            <PopoverHandler>
                         <Button  className="m-6" fullWidth>
                             Add to Plan
                         </Button>
-                        </Link>
+                            </PopoverHandler>
+                            <PopoverContent>
+                                <Card color="transparent" shadow={false}>
+                                    <Typography color="gray" className="mt-1 font-normal">
+                                       Enter your details to Add to package.
+                                    </Typography>
+                                    <form  className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+                                        <div className="mb-1 flex flex-col gap-6">
+                                            <Typography variant="h6" color="blue-gray" className="-mb-3">
+                                                Check-In Date
+                                            </Typography>
+                                            <Input
+                                                size="lg"
+                                                type="date"
+                                                name="checkInDate"
+                                                value={userInput.checkInDate}
+                                                onChange={handleInputChange}
+                                                placeholder="Check-In Date"
+                                                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                                                labelProps={{
+                                                    className: "before:content-none after:content-none",
+                                                }}
+                                            />
+                                            <Typography variant="h6" color="blue-gray" className="-mb-3">
+                                                Check-out Date
+                                            </Typography>
+                                            <Input
+                                                size="lg"
+                                                type="date"
+                                                name="checkOutDate"
+                                                value={userInput.checkOutDate}
+                                                onChange={handleInputChange}
+                                                placeholder="Check-Out Date"
+                                                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                                                labelProps={{
+                                                    className: "before:content-none after:content-none",
+                                                }}
+                                            />
+                                            <Typography variant="h6" color="blue-gray" className="-mb-3">
+                                                Rooms Count
+                                            </Typography>
+                                            <Input
+                                                size="lg"
+                                                type="text"
+                                                name="roomsCount"
+                                                value={userInput.roomsCount}
+                                                onChange={handleInputChange}
+                                                placeholder="Rooms Count"
+                                                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                                                labelProps={{
+                                                    className: "before:content-none after:content-none",
+                                                }}
+                                            />
+                                        </div>
+                                        <Button
+                                            onClick={() => {
+                                                addToCart(selectedAccommodation.accommodation_id);
+                                                navigate(`/TrPackage`); // Replace 'your-new-page-url' with the actual URL you want to navigate to
+                                            }}
+                                            className="mt-6"
+                                            fullWidth
+                                        >
+                                            Add
+                                        </Button>
+
+                                    </form>
+                                </Card>
+
+                            </PopoverContent>
+                        </Popover>
+
                     </div>
 
                 </div>
@@ -92,51 +177,13 @@ function TrViewService() {
                     <Typography>
                         {selectedAccommodation.accommodation_description}
                     </Typography>
-                    <Typography variant="h5" color="blue-gray" className="mt-6 mb-4">
-                        Facilities
-                    </Typography>
 
-                    {/*<Typography variant="h5" color="blue-gray" className="mt-6 mb-5">*/}
-                    {/*    Room Types*/}
-                    {/*</Typography>*/}
-                    {/*<>*/}
-                    {/*    <Accordion open={open === 1}>*/}
-                    {/*        <AccordionHeader onClick={() => handleOpen(1)}>Deluxe Double or Twin Room</AccordionHeader>*/}
-                    {/*        <AccordionBody>*/}
-                    {/*            Access for the Differenty-Abled/*/}
-                    {/*            Central Air Conditioning with Individual Temperature Controls/*/}
-                    {/*            Electric Power (220V-240V)/*/}
-                    {/*            Telephone with IDD Facilities/*/}
-                    {/*            Tea and Coffee Making Facilities/*/}
-                    {/*            Mini Bar/*/}
-                    {/*            42″ LCD Television with Satellite Channels,/*/}
-                    {/*            Free Wi-Fi/*/}
-                    {/*            King Size Bed/ Twin Size Bed/*/}
-                    {/*            Guest Laundry Facility/*/}
-                    {/*        </AccordionBody>*/}
-                    {/*    </Accordion>*/}
-                    {/*    <Accordion open={open === 2}>*/}
-                    {/*        <AccordionHeader onClick={() => handleOpen(2)}>*/}
-                    {/*            Studio*/}
-                    {/*        </AccordionHeader>*/}
-                    {/*        <AccordionBody>*/}
-                    {/*            Central Air Conditioning with Individual Temperature Controls/*/}
-                    {/*            Electric Power (220V-240V)/*/}
-                    {/*            Telephone with IDD Facilities/*/}
-                    {/*            Tea and Coffee Making Facilities/*/}
-                    {/*            Mini Bar/*/}
-                    {/*            42″ LCD Television with Satellite Channels/*/}
-                    {/*            Free Wi-Fi/*/}
-                    {/*            King Size Bed/ Twin Size Bed/*/}
-                    {/*            Guest Laundry Facility/*/}
-                    {/*            Bath and Shower/*/}
-                    {/*            Bathrobes/*/}
-                    {/*        </AccordionBody>*/}
-                    {/*    </Accordion>*/}
-                    {/*</>*/}
+                    <Typography variant="h5" className="my-4">
+                         Price For one person: {selectedAccommodation.accommodation_prise} $
+                    </Typography>
                 </div>
             </div>
-
+            )}
         </div>
     );
 }

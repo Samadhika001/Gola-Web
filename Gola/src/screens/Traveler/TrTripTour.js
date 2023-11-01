@@ -9,12 +9,12 @@ import { useState, useEffect } from "react";
 const TrTripTour = () => {
   const [trips, setTrips] = useState([]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get("") //database fetch link
-  //     .then((result) => setTrips(result.data))
-  //     .catch((err) => console.log(err));
-  // }, []);
+  useEffect(() => {
+    axios
+      .get("") //database fetch link
+      .then((result) => setTrips(result.data))
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <div className="flex flex-col h-screen">
