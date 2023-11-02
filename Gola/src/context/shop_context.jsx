@@ -1,40 +1,58 @@
-import { createContext, useEffect, useState } from "react";
-import accommodations from "../components/Traveler/HotelData";
+import { createContext, useState } from "react";
 
 export const ShopContext = createContext(null);
 
+// Define the categories
+const categories = ["accommodation", "experience", "transport"];
+
 const getDefaultCart = () => {
-    let cart = {};
-    for (let i = 1; i < accommodations.length + 1; i++) {
-        cart[i] = 0;
-    }
+    // Initialize the cart with sub-objects for each category
+    const cart = {};
+    categories.forEach((category) => {
+        cart[category] = {};
+    });
+
     return cart;
 };
 
 export const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
+    
 
-    // const getTotalCartAmount = () => {
-    //     let totalAmount = 0;
-    //     for (const item in cartItems) {
-    //         if (cartItems[item] > 0) {
-    //             let itemInfo = accommodations.find((accommodations) => accommodation_id === Number(item));
-    //             totalAmount += cartItems[item] * itemInfo.accommodation_prise;
-    //         }
-    //     }
-    //     return totalAmount;
+    // const addToCart = (category, itemId) => {
+    //     setCartItems((prev) => ({
+    //         ...prev,
+    //         [itemId]: {
+    //             category, // Include the category property
+    //             quantity: (prev[itemId] && prev[itemId].quantity) ? prev[itemId].quantity + 1 : 1,
+    //         },
+    //     }));
     // };
-
-    const addToCart = (itemId) => {
-        setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+    const addToCart = (category, id) => {
+        if (!cartItems[category]) {
+            cartItems[category] = {};
+        }
+        cartItems[category][id] = (cartItems[category][id] || 0) + 1;
+    };
+ 
+    const removeFromCart = (category, itemId) => {
+        setCartItems((prev) => ({
+            ...prev,
+            [category]: {
+                ...prev[category],
+                [itemId]: Math.max(0, (prev[category][itemId] || 0) - 1),
+            },
+        }));
     };
 
-    const removeFromCart = (itemId) => {
-        setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
-    };
-
-    const updateCartItemCount = (newAmount, itemId) => {
-        setCartItems((prev) => ({ ...prev, [itemId]: newAmount }));
+    const updateCartItemCount = (category, itemId, newAmount) => {
+        setCartItems((prev) => ({
+            ...prev,
+            [category]: {
+                ...prev[category],
+                [itemId]: newAmount,
+            },
+        }));
     };
 
     const checkout = () => {
@@ -46,11 +64,10 @@ export const ShopContextProvider = (props) => {
         addToCart,
         updateCartItemCount,
         removeFromCart,
-
         checkout,
     };
 
-console.log(cartItems);
+    console.log(cartItems);
 
     return (
         <ShopContext.Provider value={contextValue}>

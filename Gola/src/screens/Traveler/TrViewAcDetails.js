@@ -7,15 +7,12 @@ import {Carousel, Typography,Rating,Accordion,
    Button,
     Card,
     Input,
-    Checkbox,
 } from "@material-tailwind/react";
 
 import TopBar from "../../components/Serviceprovider/TopBar";
-import jetwing from "../../assets/jetwing.jpg";
 import accommodationsDetails from '../../components/Traveler/HotelData';
 import {ShopContext} from "../../context/shop_context";
-import transportDetails from "../../components/Traveler/TransportData"; // Import your accommodation data
-function TrViewService() {
+function TrViewAcDetails() {
 
     const{addToCart}=useContext(ShopContext);
     const { cartItems } = useContext(ShopContext);
@@ -66,17 +63,17 @@ function TrViewService() {
                     >
                         <img
                             src={selectedAccommodation.accommodation_image}
-                            alt="image 1"
+                            alt=""
                             className="h-full w-full object-cover"
                         />
                         <img
                             src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-                            alt="image 2"
+                            alt=""
                             className="h-full w-full object-cover"
                         />
                         <img
                             src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-                            alt="image 3"
+                            alt=""
                             className="h-full w-full object-cover"
                         />
                     </Carousel>
@@ -142,7 +139,7 @@ function TrViewService() {
                                         </div>
                                         <Button
                                             onClick={() => {
-                                                addToCart(selectedAccommodation.accommodation_id);
+                                                addToCart("accommodation",selectedAccommodation.accommodation_id);
                                                 navigate(`/TrPackage`); // Replace 'your-new-page-url' with the actual URL you want to navigate to
                                             }}
                                             className="mt-6"
@@ -187,4 +184,4 @@ function TrViewService() {
         </div>
     );
 }
-export default TrViewService;
+export default TrViewAcDetails;

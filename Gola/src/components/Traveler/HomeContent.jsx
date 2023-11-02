@@ -12,6 +12,7 @@ import TransportCard from "./TransportCard";
 import ExperinenceCard from "./ExperienceCards";
 import accommodationsDetails from "../../components/Traveler/HotelData";
 import transportDetails from "./TransportData";
+import experienceDetails from "./ExperienceData";
 const HomeContent = () =>{
 
 
@@ -32,7 +33,7 @@ const HomeContent = () =>{
         {
             label: "Experience",
             value: "experience",
-            desc: <ExperinenceCard />
+            desc: <ExperinenceCard experiences={experienceDetails}/>
         },
 
     ];

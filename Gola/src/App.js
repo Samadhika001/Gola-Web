@@ -28,9 +28,13 @@ import TrFoodDetails from "./screens/Traveler/TrFoodDetails";
 import PaymentGateway from "./screens/Traveler/PaymentGateway";
 import TrFoods from "./screens/Traveler/TrFoods";
 import TrPackage from "./screens/Traveler/TrPackage";
-import TrSearchResult from "./screens/Traveler/TrSearchResult";
-import TrViewService from "./screens/Traveler/TrViewService";
-import {ShopContext, ShopContextProvider} from "./context/shop_context";
+import TrAllAcResult from "./screens/Traveler/TrAllAcResult";
+import TrAllTrResult from "./screens/Traveler/TrAllTrResult";
+import TrAllExResult from "./screens/Traveler/TrallExResult";
+import TrViewAcDetails from "./screens/Traveler/TrViewAcDetails";
+import TrViewTrDetails from "./screens/Traveler/TrViewTrDetails";
+import TrViewExDetails from "./screens/Traveler/TrViewExDetails";
+import {ShopContextProvider} from "./context/shop_context";
 function App() {
   return (
     <BrowserRouter>
@@ -53,7 +57,9 @@ function App() {
 
         <Route path="/TrHome/" element={<TrHome />}></Route>
 
-          <Route path="/TrSearchResult" element={<TrSearchResult />}></Route>
+          <Route path="/TrAllAcResult" element={<TrAllAcResult />}></Route>
+            <Route path="/TrAllTrResult" element={<TrAllTrResult />}></Route>
+          <Route path="/TrAllExResult" element={<TrAllExResult />}></Route>
           <Route path="/TrHotels" element={<TrHotels />}></Route>
           <Route path="/TrTripTour" element={<TrTripTour />}></Route>
           <Route path="/TrTripList" element={<TrTripList />}></Route>
@@ -61,7 +67,9 @@ function App() {
           <Route path="/TrPlaces" element={<TrPlaces />}></Route>
           <Route path="/TrCalender" element={<TrCalender />}></Route>
 
-          <Route path="/TrViewService/:accommodation_id" element={<TrViewService />} />
+          <Route path="/TrViewAcDetails/:accommodation_id" element={<TrViewAcDetails />} />
+        <Route path="/TrViewTrDetails/:transport_id" element={<TrViewTrDetails />} />
+        <Route path="/TrViewExDetails/:experience_id" element={<TrViewExDetails />} />
             <Route path="/TrPackage" element={<TrPackage />} />
 
           <Route path="/TrProfile" element={<TrProfile />}></Route>

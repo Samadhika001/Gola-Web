@@ -18,13 +18,37 @@ import {
 } from "@material-tailwind/react";
 import Sidebar from "../../components/Serviceprovider/Sidebar";
 import TopBar from "../../components/Serviceprovider/TopBar";
-import * as React from "react";
+import  React , {useState,useEffect} from "react";
 import jetwing from "../../assets/jetwing.jpg";
 import jetwingAd from "../../assets/jetwingAd.jpeg";
 import jetwingsaman from "../../assets/jetwindsaman.jpeg";
 import {Link} from "react-router-dom";
 
 function PackagesList() {
+
+
+    const [businessEmail, setBusinessEmail] = useState('');
+    const [businessName, setBusinessName] = useState('');
+    const [businessAddress, setBusinessAddress] = useState('');
+    const [businessTelephone, setBusinessTelephone] = useState('');
+    const [businessDescription, setBusinessDescription] = useState(''); 
+    const [businessType, setBusinessType] = useState('');
+    const [businessImage, setBusinessImage] = useState(''); 
+
+
+    useEffect(() => {
+        const storedBusinessName = localStorage.getItem('businessName');
+        const storedBusinessEmail = localStorage.getItem('businessEmail');
+       
+        const storedBusinessDescription = localStorage.getItem('businessDescription');
+        
+
+        if (storedBusinessName) setBusinessName(storedBusinessName);
+        if (storedBusinessEmail) setBusinessEmail(storedBusinessEmail);
+        if (storedBusinessDescription) setBusinessDescription(storedBusinessDescription);
+
+    }, []);
+
     return (
         <div className="flex">
             <div className="basis-[12%]  border ">
@@ -126,11 +150,12 @@ function PackagesList() {
                             </CardHeader>
                             <CardBody>
                                 <Typography variant="h5" color="blue-gray" className="mb-2">
-                                    Jetwind Saman Villa
+                                {businessName}
                                 </Typography>
+                        
                                 <Typography>
-                                    Jetwing Saman Villas is laid out on a magnificent rocky headland dividing two long, surf-swept golden beaches in Benthota,Galle.
-                                </Typography>
+                       This is a Very Good Place to Visit                                                                
+                       </Typography>
                             </CardBody>
                             <CardFooter className="flex flex row gap-4 pt-0">
                                 <Button>View More</Button>

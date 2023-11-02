@@ -14,70 +14,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 
-const ExperienceCards = ({values}) => {
-  const experiences = [
-    {
-      experience_id: 1,
-      experience_name: "Yaala Safari with Lk tours",
-      experience_image: "https://bmkltsly13vb.compat.objectstorage.ap-mumbai-1.oraclecloud.com/cdn.dailymirror.lk/assets/uploads/image_074e428fee.jpg",
-      // Add other experience properties here
-    },
-    {
-      experience_id: 2,
-      experience_name: "Mud House Village Tours",
-      experience_image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/d1/41/ba/caption.jpg?w=1200&h=-1&s=1",
-      // Add other experience properties here
-    },
-    {
-      experience_id: 3,
-      experience_name: "Lavingo Travel",
-      experience_image: "https://lavingotravels.com/wp-content/uploads/2016/02/adventure-sri-lanka.jpg",
-      // Add other experience properties here
-    },
-    {
-      experience_id: 4,
-      experience_name: "Flying Ravana",
-      experience_image: "https://d1ynolcus8dvgv.cloudfront.net/2019/02/flying-rawana-header-image-mobile.jpg",
-      // Add other experience properties here
-    },
-    {
-      experience_id: 5,
-      experience_name: "Sri Lanka Baloons",
-      experience_image: "https://www.ceylonexpeditions.com/medias/itinerary/big/438/hot-air-balloon-family-adventure-holidays-in-sri-lanka-ceylon-expeditions-travel-agent-1.jpg",
-      // Add other experience properties here
-    },
-    {
-      experience_id: 6,
-      experience_name: "Yaala Safari with Lk tours",
-      experience_image: "https://bmkltsly13vb.compat.objectstorage.ap-mumbai-1.oraclecloud.com/cdn.dailymirror.lk/assets/uploads/image_074e428fee.jpg",
-      // Add other experience properties here
-    },
-    {
-      experience_id: 7,
-      experience_name: "Mud House Village Tours",
-      experience_image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/d1/41/ba/caption.jpg?w=1200&h=-1&s=1",
-      // Add other experience properties here
-    },
-    {
-      experience_id: 8,
-      experience_name: "Lavingo Travel",
-      experience_image: "https://lavingotravels.com/wp-content/uploads/2016/02/adventure-sri-lanka.jpg",
-      // Add other experience properties here
-    },
-    {
-      experience_id: 9,
-      experience_name: "Flying Ravana",
-      experience_image: "https://d1ynolcus8dvgv.cloudfront.net/2019/02/flying-rawana-header-image-mobile.jpg",
-      // Add other experience properties here
-    },
-    {
-      experience_id: 10,
-      experience_name: "Sri Lanka Baloons",
-      experience_image: "https://www.ceylonexpeditions.com/medias/itinerary/big/438/hot-air-balloon-family-adventure-holidays-in-sri-lanka-ceylon-expeditions-travel-agent-1.jpg",
-      // Add other experience properties here
-    },
-  ];
-
+const ExperienceCards = ({experiences}) => {
+  
   const settings = {
     dots: true,
     infinite: true,
@@ -99,7 +37,7 @@ const ExperienceCards = ({values}) => {
           </div>
         </div>
         <div className="m-8 w-72 flex flex-row gap-4">
-          <Input label={values} />
+          <Input label= "Experience" />
 
           <Link to="/SearchResult">
             <Button>Search</Button>
@@ -110,18 +48,18 @@ const ExperienceCards = ({values}) => {
           {experiences.map((experience) => (
               <div key={experience.experience_id}>
                 <Card className="m-6 w-64">
-                  <Link to="/ViewExperienceDetails">
-                    <CardHeader color="blue-gray" className="relative h-40">
+                <Link to={`/TrViewExDetails/${experience.experience_id}`}>
+                  <CardHeader color="blue-gray" className="relative h-40">
                       <img
-                          className="w-full h-full"
-                          src={experience.experience_image}
-                          alt="card-image"
+                        className="w-full h-full"
+                        src={experience.experience_image}
+                        alt=""
                       />
                     </CardHeader>
                   </Link>
                   <CardBody className="text-left">
-                    <Link to="/ViewExperienceDetails">
-                      <Typography variant="h5" color="blue-gray" className="font-medium">
+                  <Link to={`/TrViewExDetails/${experience.experience_id}`}>                    
+                    <Typography variant="h5" color="blue-gray" className="font-medium">
                         {experience.experience_name}
                       </Typography>
                     </Link>
@@ -131,7 +69,7 @@ const ExperienceCards = ({values}) => {
                     </div>
                     {/*<Typography>Adventure, Exploration, Fun, etc.</Typography>*/}
                   </CardBody>
-                  <CardFooter className="flex flex row gap-4 pt-0"></CardFooter>
+                  <CardFooter className="flex flex-row gap-4 pt-0"></CardFooter>
                 </Card>
               </div>
           ))}
