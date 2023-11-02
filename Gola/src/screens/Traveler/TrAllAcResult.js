@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import accommodationsDetails from '../../components/Traveler/HotelData'; // Import your accommodation data
 
-const TrSearchResult = () => {
+const TrAllAcResult = () => {
 
     return (
         <div className="w-160 m-8">
@@ -32,12 +32,12 @@ const TrSearchResult = () => {
                                 <tr key={accommodation.accommodation_id}>
                                     <td className={classes}>
                                         <div className="flex items-center gap-3 text-left">
-                                            <Link to={`/TrviewService/${accommodation.accommodation_id}`}>
+                                            <Link to={`/TrViewAcDetails/${accommodation.accommodation_id}`}>
                                                 <img className="h-40 w-40" src={accommodation.accommodation_image} alt={accommodation.accommodation_name} />
                                             </Link>
                                             <div className="flex flex-col">
-                                                <Typography variant="h6" color="blue-gray" className="font-semibold">
-                                                    <Link to={`/TrviewService/${accommodation.accommodation_id}`}>{accommodation.accommodation_name}</Link>
+                                                <Typography variant="h6" color="blue-gray" className="font-semi-bold">
+                                                    <Link to={`/TrViewAcDetails/${accommodation.accommodation_id}`}>{accommodation.accommodation_name}</Link>
                                                 </Typography>
                                                 <Typography variant="small" color="blue-gray" className="font-normal opacity-70">
                                                     {accommodation.accommodation_address}
@@ -60,4 +60,4 @@ const TrSearchResult = () => {
     );
 };
 
-export default TrSearchResult;
+export default TrAllAcResult;

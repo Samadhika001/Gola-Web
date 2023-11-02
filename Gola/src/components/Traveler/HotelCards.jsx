@@ -55,13 +55,13 @@ const HotelCard = ({ accommodations }) => {
           {accommodations.map((accommodation) => (
               <div key={accommodation.accommodation_id}>
                 <Card className="m-6 w-64">
-                  <Link to={`/TrViewService/${accommodation.accommodation_id}`}>
+                  <Link to={`/TrViewAcDetails/${accommodation.accommodation_id}`}>
                     <CardHeader color="blue-gray" className="relative h-40">
-                      <img className="w-full h-full" src={accommodation.accommodation_image} alt="card-image" />
+                      <img className="w-full h-full" src={accommodation.accommodation_image} alt="accommodation" />
                     </CardHeader>
                   </Link>
                   <CardBody className="text-left">
-                    <Link to={`/TrViewService/${accommodation.accommodation_id}`}>
+                    <Link to={`/TrViewAcDetails/${accommodation.accommodation_id}`}>
                       <Typography variant="h5" color="blue-gray" className="font-medium">
                         {accommodation.accommodation_name}
                       </Typography>

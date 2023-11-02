@@ -49,7 +49,7 @@ const TransportCard = ({transports}) => {
           {transports.map((transport) => (
               <div key={transport.transport_id}>
                 <Card className="m-6 w-64">
-                  <Link to="/TrViewService">
+                  <Link to={`/TrViewTrDetails/${transport.transport_id}`}>
                     <CardHeader color="blue-gray" className="relative h-40">
                       <img
                           className="w-full h-full"
@@ -59,7 +59,7 @@ const TransportCard = ({transports}) => {
                     </CardHeader>
                   </Link>
                   <CardBody className="text-left">
-                    <Link to="/TrViewService">
+                    <Link to={`/TrViewTrDetails/${transport.transport_id}`}>
                       <Typography variant="h5" color="blue-gray" className="font-medium">
                         {transport.transport_name}
                       </Typography>

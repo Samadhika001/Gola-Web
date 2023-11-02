@@ -10,8 +10,6 @@ import {
     Checkbox,
     Button,
     Typography,
-    Select,
-    Option,
     Textarea,
     Accordion,
     AccordionHeader,
@@ -24,7 +22,39 @@ import React from "react";
 
 function CreateService() {
     const [open, setOpen] = React.useState(1);
+    const [businessName, setBusinessName] = React.useState("");
+    const [businessEmail, setBusinessEmail] = React.useState("");
+    const [businessTelephone, setBusinessTelephone] = React.useState("");
+    const [businessAddress, setBusinessAddress] = React.useState("");
+    const [businessLatitude, setBusinessLatitude] = React.useState("");
+    const [businessLongitude, setBusinessLongitude] = React.useState("");
+    const [roomCount, setRoomCount] = React.useState("");
+    const [unitPriceForRoom, setUnitPriceForRoom] = React.useState("");
+    const [capacityCount, setCapacityCount] = React.useState("");   
+    const [unitPriceForPerson, setUnitPriceForPerson] = React.useState("");
+    const [description, setDescription] = React.useState("");
+    const [images, setImages] = React.useState("");
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        localStorage.setItem("businessName", businessName);
+        localStorage.setItem("businessEmail", businessEmail);
+        localStorage.setItem("businessTelephone", businessTelephone);
+        localStorage.setItem("businessAddress", businessAddress);
+        localStorage.setItem("businessLatitude", businessLatitude);
+        localStorage.setItem("businessLongitude", businessLongitude);   
+        localStorage.setItem("roomCount", roomCount);   
+        localStorage.setItem("unitPriceForRoom", unitPriceForRoom); 
+        localStorage.setItem("capacityCount", capacityCount);
+        localStorage.setItem("unitPriceForPerson", unitPriceForPerson); 
+        localStorage.setItem("description", description);
+        localStorage.setItem("images", images); 
+        // Repeat for all other fields
+    }
+
+    const handleDescriptionChange = (event) => {
+        setDescription(event.target.value);
+    };
     const handleOpen = (value) => setOpen(open === value ? 0 : value);
     return (
         <div className="flex">
@@ -38,6 +68,7 @@ function CreateService() {
                         <Typography variant="h4" color="blue-gray">
                             Create Service
                         </Typography>
+                    
                         <>
                         <Accordion open={open === 1}>
                             <AccordionHeader onClick={() => handleOpen(1)}>Service As a Accommodation </AccordionHeader>
@@ -45,27 +76,30 @@ function CreateService() {
                                 <Typography color="gray" className="mt-1 font-normal">
                                     Business Details <span style={{ color: 'red' }}>*</span>
                                 </Typography>
-                                <form className="mt-8 mb-2 max-w-screen-lg sm:w-8/12">
+                                <form onSubmit={handleSubmit}   className="mt-8 mb-2 max-w-screen-lg sm:w-8/12">
                                     <div className="mb-4 flex flex-row gap-6">
-                                        <Input size="lg" label="Business Name"/>
-                                        <Input size="lg" label="Business Email" />
-                                        <Input size="lg" label="Business Telephone" />
-                                        <Input size="lg" label="Address" />
+                                    <Input size="lg" label="Business Name" onChange={e => setBusinessName(e.target.value)}/>
+                                    <Input size="lg" label="Business Email" onChange={e => setBusinessEmail(e.target.value)}/>
+                                    <Input size="lg" label="Business Telephone" onChange={e => setBusinessTelephone(e.target.value)}/>
+                                    <Input size="lg" label="Business Address" onChange={e => setBusinessAddress(e.target.value)}/>
                                     </div>
-
 
                                         <Typography color="gray" className="mt-2 mb-2 font-normal">
                                           Detailed Description about Your Service Type <span style={{ color: 'red' }}>*</span>
                                         </Typography>
 
-                                        <Textarea label="Description" />
-                                    <div className="my-4 grid grid-cols-2 gap-4 ">
-                                        <Input size="lg" label="Room Count"/>
-                                        <Input size="lg" label="Unit Price for Room"/>
+                                       
+                                            <Textarea label="Description" value={description} onChange={handleDescriptionChange} />
+
+                                            <div className="my-4 grid grid-cols-2 gap-4 ">
+
+                                            <Input size="lg" label="Room Count" onChange={e => setRoomCount(e.target.value)}/>
+                                            <Input size="lg" label="Unit Price for person" onChange={e => setUnitPriceForPerson(e.target.value)}/>
 
                                         <Typography color="gray" className="mt-2 mb-2 font-normal">
                                             Add images of your service <span style={{ color: 'red' }}>*</span>
                                         </Typography>
+
                                         <div className="mb-3">
                                             <Input
                                                 type="file"
@@ -74,18 +108,9 @@ function CreateService() {
                                             />
                                         </div>
                                     </div>
-                                    {/*<Typography color="gray" className="mt-2 mb-2 font-normal">*/}
-                                    {/*    Description of the Facilities <span style={{ color: 'red' }}>*</span>*/}
-                                    {/*</Typography>*/}
-
-                                    {/*<Textarea label="Description" />*/}
-
-                                {/*    <Typography color="gray" className="mt-2 mb-2 font-normal">*/}
-                                {/*       Room Details <span style={{ color: 'red' }}>*</span>*/}
-                                {/*    </Typography>*/}
-                                {/*<RoomForm />*/}
+                                
                                     <div>
-                                        <Button className="mt-6 px-44 "  >
+                                        <Button type="submit" className="mt-6 px-44 "  >
                                             Create
                                         </Button>
                                     </div>
